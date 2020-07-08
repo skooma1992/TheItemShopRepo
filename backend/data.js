@@ -8,7 +8,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 6
 
     },
     {
@@ -19,7 +20,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 0
 
     },
     {
@@ -30,7 +32,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 6
 
     },
     {
@@ -40,7 +43,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 6
 
     },
     {
@@ -51,7 +55,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 1
 
     },
     {
@@ -62,7 +67,8 @@ export default  {
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',
-        numReviews: 10
+        numReviews: 10,
+        countInStock: 2
 
     },
 ]
