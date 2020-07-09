@@ -1,20 +1,21 @@
-
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import {signin } from '../actions/userActions';
+import {register } from '../actions/userActions';
 
 
-function SigninScreen(props) {
+function RegisterScreen(props) {
+    const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const userSignin = useSelector(state => state.userSignin);
-    const {loading, userInfo, error } = userSignin;
+    const [repassword, setRePassword] = useState('');
+    const userRegister = useSelector(state => state.userRegister);
+    const {loading, userInfo, error } = userRegister;
 
 
     const dispatch = useDispatch();
 
-
+    // If use
     useEffect(() => {
         if (userInfo){
             props.history.push("/")
@@ -27,17 +28,17 @@ function SigninScreen(props) {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        dispatch(signin(email, password))
+        dispatch(register(name, email, password))
 
     }
     return <div className="form">
         <form onSubmit={submitHandler}>
             <ul className="form-container">
                 <li>
-                    <h2>Sign-In</h2>
+                    <h2>Register Your Item Shop Account!</h2>
                 </li>
                 <li>
-                    {loading && <div>loading..</div>}
+                    {loading && <div>Register Complete</div>}
                     {error && <div>{error}</div>}
                 </li>
                 <li>
@@ -45,6 +46,14 @@ function SigninScreen(props) {
                         Email
                     </label>
                     <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
+
+                    </input>
+                </li>
+                <li>
+                    <label htmlFor="name">
+                        Name
+                    </label>
+                    <input type="name" name="name" id="name" onChange={(e) => setName(e.target.value)}>
 
                     </input>
                 </li>
@@ -57,20 +66,26 @@ function SigninScreen(props) {
                     </input>
                 </li>
                 <li>
-                    <button type="submit" className="button primary">Sign In</button>
+                    <label htmlFor="rePassword">
+                       Re-Enter Password
+                        </label>
+                    <input type="Password" id="rePpassword" name="rePpassword" onChange={(e) => setRePassword(e.target.value)}>
+
+                    </input>
+                </li>
+                <li>
+                    <button type="submit" className="button primary">Register</button>
                 </li>
                 <li>
                     <h4>
-                    New to the Item Shop?!
+                    Already have an account? <Link to="/signin">Sign-in</Link>
                     </h4>
                     </li>
-                <li>
-                    <Link to="/register" className="button text-center secondary">Create your Item Shop account here!</Link>
-                </li>
+                
             </ul>
         </form>
     </div>
 
 }
 
-export default SigninScreen;
+export default RegisterScreen;
