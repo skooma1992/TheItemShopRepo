@@ -3,6 +3,9 @@ import Cookie from "js-cookie"
 import { CART_ADD_ITEM, CART_REMOVE_ITEM } from "../constants/cartConstants";
 
 
+
+// ADD TO CART FUNCTIONALITY IN ACTION 
+    
 const addToCart = (productId, qty) => async (dispatch, getState) => {
 
     try {
@@ -22,6 +25,8 @@ const addToCart = (productId, qty) => async (dispatch, getState) => {
     }
     catch (error) { }
 }
+
+// REMOVE FROM CART FUNCTIONALITY IN ACTION
 const removeFromCart = (productId) => (dispatch, getState) =>{
     dispatch({
         type: CART_REMOVE_ITEM, payload: productId

@@ -18,10 +18,10 @@ function HomeScreen (props){
     };
     }, [])
 
-
+// IF LOADING DISPLAY
     return loading? <div> Loading...</div> :
     error? <div>{error}</div>:
-
+// IF NOT DISPLAY PRODUCT LIST 
     <ul className="products">
       {
       products.map(product =>

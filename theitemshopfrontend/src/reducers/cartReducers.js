@@ -1,6 +1,6 @@
 import { CART_ADD_ITEM , CART_REMOVE_ITEM } from "../constants/cartConstants";
 
-
+// FINDING AND REMOVING ITEM FROM CART
 function cartReducer(state = { cartItems: [] }, action) {
     switch (action.type) {
         case CART_ADD_ITEM:

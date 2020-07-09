@@ -4,12 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 
 function CartScreen(props) {
-
+// DEFINE CART AND QTY
     const cart = useSelector(state => state.cart);
     const { cartItems } = cart;
-
     const productId = props.match.params.id;
     const qty = props.location.search ? Number(props.location.search.split("=")[1]) : 1;
+    // DECLARING DISPATCH FOR REMOVE CART
     const dispatch = useDispatch();
     const removeFromCartHandler = (productId) => {
         dispatch(removeFromCart(productId));
@@ -21,6 +21,8 @@ function CartScreen(props) {
             dispatch(addToCart(productId, qty));
         }
     }, [])
+
+    // Redirect to Shipping
     const checkoutHandler = () => {
         props.history.push("/signin?redirect=shipping");
     }
@@ -58,6 +60,7 @@ function CartScreen(props) {
                                         </Link>
 
                                     </div>
+                                  {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOS ACTION AND UPDATE VALUE  */}
                                     <div>
                                     Qty:
                   <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
@@ -79,6 +82,7 @@ function CartScreen(props) {
       </ul>
 
     </div>
+    {/* ADDING SUBTOTAL AND PRICE BASED OFF CART ITEMS */}
     <div className="cart-action">
       <h3>
         Subtotal ( {cartItems.reduce((a, c) => a + c.qty, 0)} items)
