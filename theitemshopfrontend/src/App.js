@@ -4,10 +4,20 @@ import './App.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
+<<<<<<< HEAD
 import Search from './actions/Search';
+=======
+import SigninScreen from './screens/SigninScreen';
+import { useSelector } from 'react-redux';
+import RegisterScreen from './screens/RegisterScreen'
+>>>>>>> af776f91ca8baccdb98a20d20ab62e122875a127
 
 
 function App() {
+
+
+const userSignin = useSelector(state=>state.userSignin);
+const {userInfo} = userSignin
 
   const openMenu = () =>{
   document.querySelector(".sidebar").classList.add("open")
@@ -43,6 +53,15 @@ function App() {
         <a href="cart.html"><img src="/images/bit-13-512.png" alt="cart icon"></img></a>
       </section>
       
+      <div className="header-links">
+          
+            {/* IF THE USER IS SIGNED IN SHOW PROFILE PAGE IF NOT SHOW SIGN IN SCREEN */}
+            {
+              userInfo ? <Link to="/profile">{userInfo.name}</Link>:
+              <Link to="/signin">Sign In</Link>
+            }
+          <a href="cart.html">Your Cart</a>
+      </div>
   </header>
   
  
@@ -61,6 +80,7 @@ function App() {
   </aside>
 
   
+  
   <main className="main"> 
       <div className="itemHeader">
         <div className="itemHeader-links">
@@ -69,6 +89,8 @@ function App() {
         </div>
       </div>
       <div className="content">
+        <Route path ="/signin" component = {SigninScreen} />
+        <Route path = '/register' component = {RegisterScreen}/>
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component = {CartScreen}/>
         <Route path="/" exact={true} component={HomeScreen} />
