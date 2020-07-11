@@ -16,7 +16,7 @@ export default  {
         _id:'2',
         name: 'Item test 2',
         category:'test category2',
-        image: '/images/d1.jpeg',
+        image: '/images/truth.jpg',
         price: 60,
         brand: 'test brand',
         rating: '4.5 stars',

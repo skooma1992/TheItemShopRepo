@@ -60,13 +60,14 @@ function ProductScreen(props) {
                                 Status: {product.countInStock > 0? "In stock": "Out Of Stock"}
                             </li>
                             <li>
-                                {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOS ACTION AND UPDATE VALUE  */}
+                                {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOUS ACTION AND UPDATE VALUE  */}
                                 Qty: <select value= {qty} onChange={(e) => {setQty(e.target.value)} } >
                                     {[...Array(product.countInStock).keys()].map(x=>
                                         <option key={x+1} value={x+1}>{x+1}</option>)}
                                 </select>
                             </li>
                             <li>
+                                
                                 {product.countInStock >0 && <button onClick={handleAddToCart} className="button"> Add to Cart </button>}
                                
                             </li>
