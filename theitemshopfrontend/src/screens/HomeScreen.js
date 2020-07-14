@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 
+
 function HomeScreen (props){
 
   const productList = useSelector(state => state.productList);
@@ -22,13 +23,14 @@ function HomeScreen (props){
     return loading? <div> Loading...</div> :
     error? <div>{error}</div>:
 // IF NOT DISPLAY PRODUCT LIST 
+<div>
+  <div className="banner-inner-page"></div>
     <ul className="products">
       {
       products.map(product => 
         <li key= {product._id}>
         <div className="product">
            <Link to={'/product/' + product._id}><img className="product-image" src={product.image} alt="product"></img></Link>
-            
             <div className="product-name">
                 <Link to={'/product/' + product._id}>{product.name}</Link></div>
             <div className="product-brand">{product.brand}</div>
@@ -37,9 +39,12 @@ function HomeScreen (props){
         </div>
     </li>
         )
-    }
+      }
      
       
   </ul>
+  
+  </div>
+  
 }
 export default HomeScreen;
