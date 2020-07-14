@@ -1,83 +1,79 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, connect } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
+// import { fishData } from '../actions/fishDataActions';
+import FishData from "../components/fishData";
 
 function ProductScreen(props) {
     const [qty, setQty] = useState(1);
-    const productDetails = useSelector(state => state.productDetails);
-    const { product, loading, error } = productDetails;
+    const dataFish = useSelector(state => state.dataFish);
     const dispatch = useDispatch();
+    const { loading, product } = props.fishData;
 
 
-    useEffect(() => {
-        dispatch(detailsProduct(props.match.params.id));
-        return () => {
+    // useEffect(() => {
+    //     dispatch(fishData(props.match.params.id)).then((res) => {
+    //         console.log(res)
+    //     })
+    //     return () => {
 
-        }
-    }, []);
-    
-// MATCHING QTY WITH NEW QTY
-    const handleAddToCart = () =>{
+    //     }
+    // }, []);
+
+    // MATCHING QTY WITH NEW QTY
+    const handleAddToCart = () => {
         props.history.push("/cart/" + props.match.params.id + "?qty=" + qty)
     }
 
-    return <div>
+    const displayFishData = () => {
+        if (props.fishData.length) {
+            return props.fishData.map(fish => {
+                return (
+                    // JSX goes here
+                    <div>
+                        <div className="details">
+                            <div className="details-image">
+                                <img src={product.fish[1].image_uri} alt="fish"></img>
+                            </div>
+                            <div className="details-info">
+                                <ul>
+                                    <li>
+                                        <h4>{product.fish["file-name"]}</h4>
+                                    </li>
+                                    <li>
+                                        <b>${fish.price}</b>
+                                    </li>
+                                    <li>
+                                        Description:
+                                        <div>
+                                            {fish["museum-phrase"]}
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                );
+            })
+        }
+    }
+
+    return loading? <div>Loading...</div> :
+    // error? <div>{error}</div>:
+    <div>
         <div className="back-to-result">
             <Link to="/">Back to results</Link>
         </div>
-        {loading ? <div>Loading...</div> :
-            error ? <div>{error}</div> :
-                (<div className="details">
-                    <div className="details-image">
-                        <img src={product.image} alt="product"></img>
-                    </div>
-                    <div className="details-info">
-                        <ul>
-                            <li>
-                                <h4>{product.name}</h4>
-                            </li>
-                            <li>
-                                {product.rating} Stars ({product.numReviews} Reviews)
-                </li>
-                            <li>
-                                <b>${product.price}</b>
-                            </li>
-                            <li>
-                                Description:
-                    <div>
-                                    {product.description}
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="details-action">
-                        <ul>
-                            <li>
-                                Price: {product.price} 
-                            </li>
-                            <li>
-                                Status: {product.countInStock > 0? "In stock": "Out Of Stock"}
-                            </li>
-                            <li>
-                                {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOS ACTION AND UPDATE VALUE  */}
-                                Qty: <select value= {qty} onChange={(e) => {setQty(e.target.value)} } >
-                                    {[...Array(product.countInStock).keys()].map(x=>
-                                        <option key={x+1} value={x+1}>{x+1}</option>)}
-                                </select>
-                            </li>
-                            <li>
-                                {product.countInStock >0 && <button onClick={handleAddToCart} className="button"> Add to Cart </button>}
-                               
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                )
-        }
-                </div>
-
+        <ul>
+        {/* {displayFishData(product)} */}
+        <FishData />
+        </ul>
+    </div>
 }
 
-export default ProductScreen;
+const mapStateToProps = (state) => ({
+    fishData: state.fishData
+})
+export default connect(mapStateToProps)(ProductScreen);
