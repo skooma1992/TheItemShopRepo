@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.post('/signin', async (req, res) => {
-
+// Sign in user
     const signinUser = await User.findOne({
       email: req.body.email,
       password: req.body.password
@@ -25,6 +25,8 @@ router.post('/signin', async (req, res) => {
       res.status(401).send({ msg: 'Invalid Email or Password.' });
     }
   
+
+    // Creating New User
   })
   router.post('/register', async (req, res) => {
     const user = new User({

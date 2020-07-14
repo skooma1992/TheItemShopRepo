@@ -60,7 +60,7 @@ function CartScreen(props) {
                                         </Link>
 
                                     </div>
-                                  {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOS ACTION AND UPDATE VALUE  */}
+                                  {/* TAKE IN VALUE OF ITEM QTY FROM PREVIOuS ACTION AND UPDATE VALUE  */}
                                     <div>
                                     Qty:
                   <select value={item.qty} onChange={(e) => dispatch(addToCart(item.product, e.target.value))}>
