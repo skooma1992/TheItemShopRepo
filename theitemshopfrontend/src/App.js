@@ -11,7 +11,8 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-
+import AllItems from './screens/AllItems';
+import OrderScreen from './screens/OrderScreen';
 
 
 
@@ -68,6 +69,7 @@ const {userInfo} = userSignin
   
   <main className="main"> 
       <div className="content">
+        <Route path = "/order/:id" component= {OrderScreen}/>
         <Route path = "/products" component = {ProductsScreen}/>
         <Route path = "/shipping" component = {ShippingScreen}/>
         <Route path = "/payment" component = {PaymentScreen}/>
@@ -76,6 +78,7 @@ const {userInfo} = userSignin
         <Route path = '/register' component = {RegisterScreen}/>
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component = {CartScreen}/>
+        <Route path ="/allitems" component = {AllItems}/>
         <Route path="/" exact={true} component={HomeScreen} />
           
       </div>

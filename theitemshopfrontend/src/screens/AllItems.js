@@ -5,7 +5,7 @@ import { listProducts } from '../actions/productActions';
 
 
 
-function HomeScreen (props){
+function AllItems (props){
 
   const productList = useSelector(state => state.productList);
   const {products, loading, error} = productList;
@@ -24,11 +24,6 @@ function HomeScreen (props){
     error? <div>{error}</div>:
 // IF NOT DISPLAY PRODUCT LIST 
 <div>
-  <div>
-    <Link to ={'/allitems'}>
-      Link to Items 
-    </Link>
-  </div>
   <div className="banner-inner-page"></div>
     <ul className="products">
       {
@@ -52,4 +47,4 @@ function HomeScreen (props){
   </div>
   
 }
-export default HomeScreen;
+export default AllItems;
