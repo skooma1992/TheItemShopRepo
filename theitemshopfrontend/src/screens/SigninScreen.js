@@ -1,4 +1,4 @@
-
+import './signin.css'
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -31,7 +31,7 @@ function SigninScreen(props) {
         dispatch(signin(email, password))
 
     }
-    return <div className="form">
+    return <div className="signInform">
         <form onSubmit={submitHandler}>
             <ul className="form-container">
                 <li>

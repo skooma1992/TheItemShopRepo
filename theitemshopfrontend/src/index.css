@@ -6,7 +6,7 @@ body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: rgb(244, 253, 227);
+ 
 }
 button{
   font-size: 1.6rem;
@@ -31,6 +31,7 @@ button{
 .header{
   grid-area: header;
   height: 90px;
+  width: 100%;
   background-color: rgba(13, 195, 250, 0.781);
   color: white;
   display: flex;
@@ -43,6 +44,7 @@ button{
   align-items: flex-end;
   justify-content: space-around;
   height: 35px;
+  width: 100%;
   padding: 8px;
   background-color: rgba(36, 250, 36, 0.603);
   margin-top: 70px;
@@ -89,7 +91,6 @@ button{
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  
   
 }
 .signInbutt {
@@ -143,147 +144,9 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30rem;
-}
-/* Sign in and Register screens */
-.form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0px -15px;
-  background-color: rgba(232, 246, 250, 0.13);
-  width: 500px;
-  border-radius: 20%;
-  
-}
-/* home screen */
-.content .storeFrontdiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0px -15px;
-  background-color: rgb(244, 253, 227);
-  
-  
-}
-.storeFrontdiv {
-  flex-direction: column;
-  
+  height: 8rem;
 }
 
-.homepageButts {
-  margin: 25px 0px 55px 0px;
-}
-.priceFilterbutt{
-  height: 115px;
-  width: 115px;
-  border-radius: 100%;
-  color: rgb(70, 68, 68);
-  background-color:  #db0606ec;
-  font-family: Helvetica, Arial, Sans-Serif;
-  font-size: 20px;
-  text-decoration: none;
-  text-shadow: -1px -1px 1px #6b6b6b;
-  position: relative;
-  padding: 1px;
-  box-shadow: 5px 5px 0 #666;
-  transition: all 0.3s ease;
-  margin: 0 45px 0 5px;
-  cursor: pointer;
-}
-.ratingFilterbutt{
-  height: 115px;
-  width: 115px;
-  border-radius: 100%;
-  color: rgb(70, 68, 68);
-  background-color: #db0606ec;
-  font-family: Helvetica, Arial, Sans-Serif;
-  font-size: 20px;
-  text-decoration: none;
-  text-shadow: -1px -1px 1px #6b6b6b;
-  position: relative;
-  padding: 1px;
-  box-shadow: 5px 5px 0 #666;
-  transition: all 0.3s ease;
-  margin: 0 10px 0 5px;
-}
-.priceFilterbutt:hover {
-  color: rgb(189, 187, 187);
-  text-shadow: rgb(70, 68, 68);
-  box-shadow: 0px 0px 0px rgb(2, 175, 11);
-  top: 5px;
-  left: 5px;
-}
-.ratingFilterbutt:hover {
-  color: rgb(189, 187, 187);
-  text-shadow: rgb(70, 68, 68);
-  box-shadow: 0px 0px 0px rgb(2, 175, 11);
-  top: 5px;
-  left: 5px;
-  cursor: pointer;
-}
-.products{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0px -15px;
-  background-color: rgb(244, 253, 227);
-  
-}
-.product{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-  max-height: 400px;
-  background-color: rgba(36, 250, 36, 0.349);
-  border-radius: 25px;
-  padding: 15px;
-}
-.product:hover {
-  box-shadow: 0px 0px 8px 3px #f0c040;
-}
-a{
-  text-decoration: none;
-  
-}
-a:hover{
-  font-weight: 300;
-  color:  #28292a;
-}
-.products li{
-  list-style: none;
-  padding: 0;
-  flex: 0 1 34rem;
-  margin: 1rem;
-  height: 50rem;
-}
-.product-name{
-  font-size: 2rem;
-  font-weight: bold;
-}
-.product-brand{
-  font-size: 1.2rem;
-  color: grey;
-}
-.product-price{
-  font-size: 2.5rem;
-  font-weight: bold;
-
-}
-.product-image{
-  display: block;
-  max-width: 34rem;
-  max-height: 20rem;
-
-}
-.product-ratings{
-  margin-bottom: 1rem;
-}
 
 /* PRODUCT DETAILS */
 

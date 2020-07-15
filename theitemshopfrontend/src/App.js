@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-import './App.css';
+//import './index.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -29,7 +29,7 @@ function App() {
         <header className="header">
           <div className="brand">
 
-            <Link to="/"><img src="/images/item-shop-logo.png"></img></Link>
+            <Link to="/"><img src="/images/item-shop-logo.png" alt="itemshoplogo"></img></Link>
 
           </div>
           <div className="searchbox-wrap">

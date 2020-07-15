@@ -1,0 +1,9 @@
+.signInform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0px -15px;
+    background-color: rgba(232, 246, 250, 0.13);
+    border-radius: 20%;
+  }

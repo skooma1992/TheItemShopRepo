@@ -1,3 +1,4 @@
+import './homescreen.css'
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
@@ -24,16 +25,19 @@ function HomeScreen(props) {
       // IF NOT DISPLAY STORE FRONT 
 
       <div className="storeFrontdiv">
-        <div className="content">
+        <div className="contentDiv">
+          <div className="content">
 
-          <img src="/images/ItemShopStoreFront.png"></img>
+            <img src="/images/ItemShopStoreFront.png"></img>
 
+          </div>
+
+          <div className="homepageButts">
+            <button className="priceFilterbutt">Price Low-High</button>
+            <button className="ratingFilterbutt">Rating High-Low</button>
+          </div>
         </div>
 
-        <div className="homepageButts">
-          <button className="priceFilterbutt">Price Low-High</button>
-          <button className="ratingFilterbutt">Rating High-Low</button>
-        </div>
 
       </div>
 }
