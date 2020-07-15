@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
+import FishData from "../components/fishData";
 
 function ProductScreen(props) {
     const [qty, setQty] = useState(1);
@@ -80,8 +81,6 @@ function ProductScreen(props) {
                 </div>
 
 }
-// return  <div>
-// <ul><FishData /></ul>
-// </div>
+
 
 export default ProductScreen;

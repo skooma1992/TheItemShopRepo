@@ -11,6 +11,8 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+import testFishData from './screens/fishTest';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -77,6 +79,7 @@ const {userInfo} = userSignin
         <Route path="/product/:id" component={ProductScreen} />
         <Route path="/cart/:id?" component = {CartScreen}/>
         <Route path="/" exact={true} component={HomeScreen} />
+        <Route path = "/testFish" component = {testFishData}/>
           
       </div>
     

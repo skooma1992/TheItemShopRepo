@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import FishCard from "./fishCard";
 
 export default class FishData extends React.Component{
     state = {
@@ -15,9 +16,7 @@ export default class FishData extends React.Component{
 
     render() {
         return (
-            <ul>
-            {this.state.fish.map(fish => <li key={fish.id}>{fish.name["name-USen"]}<img src={fish.icon_uri} alt="fish"></img></li>)}
-            </ul>
+        this.state.fish.map(card => (<FishCard name={card.name} image_uri={card.image_uri} location={card.location} id={card.id} key={card.id} icon_uri={card.icon_uri}/>))
         )
     }
 }
