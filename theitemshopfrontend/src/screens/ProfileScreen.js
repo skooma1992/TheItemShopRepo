@@ -6,7 +6,9 @@ function ProfileScreen(props){
         <div className="profile-info">
         </div>
         <div className="profile-orders">
-            
+
         </div>
     </div>
 }
+
+export default ProfileScreen;
