@@ -6,7 +6,7 @@ import CheckoutSteps from '../components/CheckoutSteps';
 import { createOrder, detailsOrder, payOrder } from '../actions/orderActions';
 import PaypalButton from '../components/PaypalButton';
 function OrderScreen(props) {
-
+    
     const orderPay = useSelector(state => state.orderPay)
     const {loading: loadingPay, success: successPay, error: errorPay} = orderPay;
 
@@ -16,12 +16,14 @@ function OrderScreen(props) {
     return () => {
     };
   }, []);
+
+
+
   const handleSuccessPayment = (paymentResult) =>{
       dispatch(payOrder(order, paymentResult))
   }
   const orderDetails = useSelector(state => state.orderDetails);
   const { loading, order, error } = orderDetails;
-  const payHandler = () => { };
   console.log(orderDetails)
 
   return loading ? <div>Loading ...</div> : error ? <div>{error}</div> :
