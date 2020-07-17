@@ -16,7 +16,7 @@ export default class FishData extends React.Component{
 
     render() {
         return (
-        this.state.fish.map(card => (<FishCard name={card.name} image_uri={card.image_uri} location={card.location} id={card.id} key={card.id} icon_uri={card.icon_uri}/>))
+        this.state.fish.map(card => (<FishCard name={card.name} image_uri={card.image_uri} location={card.location} id={card.id} key={card.id} icon_uri={card.icon_uri} availability={card.availability} museum-phrase={card["museum-phrase"]}/>))
         )
     }
 }

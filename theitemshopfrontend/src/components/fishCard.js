@@ -8,22 +8,16 @@ import Col from 'react-bootstrap/Col'
 export default function FishCard(props) {
 
         return (
-            <Container fluid>
-                <Row md={3}>
-                    <Col>
-                    <Card style={{ width: '18rem' }} key={props.id}>
+                    <Card style={{ width: '18rem'}} key={props.id}>
                         <Card.Img variant="top" src={props.icon_uri} alt="fish" />
                         <Card.Body>
                             <Card.Title>{props.name["name-USen"]}</Card.Title>
                             <Card.Text>
-                                Found: {props.location}
+                                {props["museum-phrase"]}
                             </Card.Text>
                             <Button variant="primary">This doesn't work yet</Button>
                         </Card.Body>
                     </Card >
-                    </Col>
-                </Row>
-            </Container>
         )
 
 }
