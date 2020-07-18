@@ -12,8 +12,9 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import AllItems from './screens/AllItemsScreen';
+import AllItemsScreen from './screens/AllItemsScreen';
 import OrderScreen from './screens/OrderScreen';
+
 
 
 
@@ -65,6 +66,9 @@ function App() {
             </div>
           </div>
           <div className="content">
+            <Route path = "/order/:id" component = {OrderScreen}/>
+            <Route path ="/allitems" component = {AllItemsScreen}/>
+           <Route path = "/products" component = {ProductsScreen}/>
             <Route path = "/shipping" component = {ShippingScreen}/>
             <Route path = "/payment" component = {PaymentScreen}/>
             <Route path = "/placeorder" component = {PlaceOrderScreen}/>
