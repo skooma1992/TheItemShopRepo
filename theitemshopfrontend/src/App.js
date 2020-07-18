@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-//import './index.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -40,7 +39,7 @@ function App() {
             //onChange= {handleInput}
             //onKeyPress= {search} 
             />
-            
+
           </div>
 
           <div className="headerLinks">
@@ -55,31 +54,36 @@ function App() {
               <a href="cart.html"><img src="/images/bit-13-512.png" alt="cart icon"></img></a>
             </button>
           </div>
+
         </header>
 
         <main className="main">
-          <div className="itemHeader">
+          <header className="itemHeader">
             <div className="itemHeader-links">
               <button className="itembarIcon-1"><a href="index.html">Products 1</a></button>
               <button className="itembarIcon-2"><a href="index.html">Products 2</a></button>
             </div>
-          </div>
+          </header>
           <div className="content">
-            <Route path = "/shipping" component = {ShippingScreen}/>
-            <Route path = "/payment" component = {PaymentScreen}/>
-            <Route path = "/placeorder" component = {PlaceOrderScreen}/>
+            <Route path="/shipping" component={ShippingScreen} />
+            <Route path="/payment" component={PaymentScreen} />
+            <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-
+            <Route path="/AllItems" component={AllItems} />
+            <Route path="/Products" component={ProductsScreen} />
           </div>
 
 
         </main>
-        <footer className="footer">All Rights Reserved</footer>
+        <footer className="footer">
+          All Rights Reserved
+        </footer>
       </div>
+
     </BrowserRouter>
 
   );
