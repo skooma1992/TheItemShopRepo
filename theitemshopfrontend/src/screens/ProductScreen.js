@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './product.css'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
@@ -39,7 +40,7 @@ function ProductScreen(props) {
                             </li>
                             <li>
                                 {product.rating} Stars ({product.numReviews} Reviews)
-                </li>
+                            </li>
                             <li>
                                 <b>${product.price}</b>
                             </li>
