@@ -12,7 +12,7 @@ import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import testFishData from './screens/fishTest';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 
@@ -63,9 +63,14 @@ function App() {
         <main className="main">
           <div className="itemHeaderdiv">
             <header className="itemHeader">
-              <div className="itemHeader-links">
-                <button className="itembarIcon-1"><a href="index.html">Products 1</a></button>
-                <button className="itembarIcon-2"><a href="index.html">Products 2</a></button>
+              <div className="itemHeader-links"> 
+                <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" alt="carrot icon"></img></Link></button>
+                <button className="swButt"><Link to="/allitems" className="stButt"><img src="/images/staffIcon.png" alt="carrot icon"></img></Link></button>
+                <button className="swButt"><Link to="/allitems" className="vButt"><img src="/images/carrotIcon.png" alt="carrot icon"></img></Link></button>
+                <button className="swButt"><Link to="/testFish" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>
+                <button className="swButt"><Link to="/allitems" className="mButt"><img src="/images/meatIcon.png" alt="meat icon"></img></Link></button>
+                <button className="swButt"><Link to="/allitems" className="sButt"><img src="/images/stairIcon.png" alt="stair icon"></img></Link></button>
+                <button className="swButt"><Link to="/allitems" className="bButt"><img src="/images/broomIcon.png" alt="broom icon"></img></Link></button>
               </div>
             </header>
           </div>
