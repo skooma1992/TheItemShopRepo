@@ -1,50 +1,44 @@
-import React, { useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
+import './homescreen.css'
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 
 
-
-function HomeScreen (props){
+function HomeScreen(props) {
 
   const productList = useSelector(state => state.productList);
-  const {products, loading, error} = productList;
+  const { products, loading, error } = productList;
   const dispatch = useDispatch();
 
 
   useEffect(() => {
     dispatch(listProducts());
-    return() => {
+    return () => {
       //
     };
-    }, [])
+  }, [])
 
-// IF LOADING DISPLAY
-    return loading? <div> Loading...</div> :
-    error? <div>{error}</div>:
-// IF NOT DISPLAY PRODUCT LIST 
-<div>
-  <div className="banner-inner-page"></div>
-    <ul className="products">
-      {
-      products.map(product => 
-        <li key= {product._id}>
-        <div className="product">
-           <Link to={'/product/' + product._id}><img className="product-image" src={product.image} alt="product"></img></Link>
-            <div className="product-name">
-                <Link to={'/product/' + product._id}>{product.name}</Link></div>
-            <div className="product-brand">{product.brand}</div>
-            <div className="product-price">${product.price}</div>
-            <div className="product-rating">{product.ratings} Stars {product.reviews} </div>
+  // IF LOADING DISPLAY
+  return loading ? <div> Loading...</div> :
+    error ? <div>{error}</div> :
+      // IF NOT DISPLAY STORE FRONT 
+
+      <div className="storeFrontdiv">
+        <div className="contentDiv">
+          <div className="content">
+
+            <img src="/images/ItemShopStoreFront.png"></img>
+
+          </div>
+
+          <div className="homepageButts">
+            <button className="priceFilterbutt"><Link to="/allitems">Price Low-High</Link></button>
+            <button className="ratingFilterbutt">Rating High-Low</button>
+          </div>
         </div>
-    </li>
-        )
-      }
-     
-      
-  </ul>
-  
-  </div>
-  
+
+
+      </div>
 }
 export default HomeScreen;

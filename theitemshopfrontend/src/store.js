@@ -5,6 +5,7 @@ import { productListReducer, productDetailsReducer, productSaveReducer, productD
 import { cartReducer } from './reducers/cartReducers'
 import { userSigninReducer, userRegisterReducer } from './reducers/userReducers';
 import { fishDataReducer, fishListReducer } from './reducers/fishReducers';
+import { orderCreateReducer, orderDetailsReducer, orderPayReducer } from './reducers/orderReducers';
 
 const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo = Cookie.getJSON("userInfo") || null;
@@ -21,7 +22,10 @@ const reducer = combineReducers({
     fishData: fishDataReducer,
     fishList: fishListReducer,
     productSave: productSaveReducer,
-    productDelete: productDeleteReducer
+    productDelete: productDeleteReducer,
+    orderCreate: orderCreateReducer,
+    orderDetails: orderDetailsReducer,
+    orderPay: orderPayReducer
 })
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(reducer, initialState, composeEnhancer(applyMiddleware(thunk)))

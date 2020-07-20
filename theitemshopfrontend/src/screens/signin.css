@@ -1,0 +1,15 @@
+.signInform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 550px;
+    width: 500px;
+    margin-top: 55px;
+    background-color: rgba(107, 218, 248, 0.445);
+    border-radius: 20%;
+  }
+.form-container {
+  background-color: honeydew;
+  border-radius: 15px;
+}
