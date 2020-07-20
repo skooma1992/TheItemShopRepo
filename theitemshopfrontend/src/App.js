@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter, Route, Link } from 'react-router-dom';
-//import './index.css';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
@@ -12,7 +11,9 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import AllItemsScreen from './screens/AllItemsScreen';
+import testFishData from './screens/fishTest';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
@@ -29,22 +30,22 @@ function App() {
   return (
     <BrowserRouter>
       <div className="grid-container">
+        <div className="headerDiv">
+          <header className="header">
+            <div className="brand">
 
-        <header className="header">
-          <div className="brand">
+              <Link to="/"><img src="/images/item-shop-logo.png" alt="itemshoplogo"></img></Link>
 
-            <Link to="/"><img src="/images/item-shop-logo.png" alt="itemshoplogo"></img></Link>
+            </div>
+            <div className="searchbox-wrap">
+              <input type="text"
+                placeholder="Search for an Item..."
+                className="searchbox"
+              //onChange= {handleInput}
+              //onKeyPress= {search} 
+              />
 
-          </div>
-          <div className="searchbox-wrap">
-            <input type="text"
-              placeholder="Search for an Item..."
-              className="searchbox"
-            //onChange= {handleInput}
-            //onKeyPress= {search} 
-            />
-            
-          </div>
+            </div>
 
           <div className="headerLinks">
             <button className="signInbutt header-links">
@@ -72,12 +73,16 @@ function App() {
           </div>
         </header>
 
+          
+        </div>
         <main className="main">
-          <div className="itemHeader">
-            <div className="itemHeader-links">
-              <button className="itembarIcon-1"><a href="index.html">Products 1</a></button>
-              <button className="itembarIcon-2"><a href="index.html">Products 2</a></button>
-            </div>
+          <div className="itemHeaderdiv">
+            <header className="itemHeader">
+              <div className="itemHeader-links">
+                <button className="itembarIcon-1"><a href="index.html">Products 1</a></button>
+                <button className="itembarIcon-2"><a href="index.html">Products 2</a></button>
+              </div>
+            </header>
           </div>
           <div className="content">
             <Route path = "/orders" component = {OrdersScreen}/>
@@ -93,13 +98,19 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-
+            <Route path="/Products" component={ProductsScreen} />
+            <Route path = "/testFish" component = {testFishData}/>
           </div>
 
 
         </main>
-        <footer className="footer">All Rights Reserved</footer>
+        <div className="footerDiv">
+          <footer className="footer">
+            All Rights Reserved
+          </footer>
+        </div>
       </div>
+
     </BrowserRouter>
 
   );
