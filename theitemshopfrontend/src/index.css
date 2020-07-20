@@ -27,7 +27,7 @@ button{
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
   width: 100%;
-  
+  justify-items: center;
 }
 .main {
   width: 100%;
@@ -39,9 +39,9 @@ button{
 .header{
   grid-area: header;
   height: 90px;
+  width: 1400px;
   border-radius: 35px;
-  width: 75%;
-  margin-left: 13%;
+  margin: auto;
   background-color: rgba(13, 195, 250, 0.657);
   color: white;
   display: flex;
@@ -49,6 +49,7 @@ button{
   align-items: center;
   padding: 15px;
 }
+
 .itemHeader {
   display: flex;
   align-items: center;
@@ -58,7 +59,7 @@ button{
   padding: 8px;
   background-color: rgba(31, 228, 31, 0.431);
   margin-top: 95px;
-  margin-left: 13.3%;
+ 
   border-radius: 18px;
 }
 .searchbox {
@@ -151,14 +152,19 @@ button{
 .main{
   grid-area: main;
 }
+.footerDiv ,.itemHeaderdiv,.headerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .footer{
   background-color: rgba(13, 195, 250, 0.972);
   text-align: center;
   padding: 20px;
   position: absolute;
-  left: 12.3%;
-  margin-top: 70%;
-  height: 74.5px;
-  width: 75%;
+  height: 70px;
+  width: 80%;
   border-radius: 18px;
+  margin-top: 65px;
 }
