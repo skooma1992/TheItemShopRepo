@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
-import Search from './actions/Search';
+
 import SigninScreen from './screens/SigninScreen';
 import { useSelector } from 'react-redux';
 import RegisterScreen from './screens/RegisterScreen';
@@ -11,10 +11,10 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import testFishData from './screens/fishTest';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import OrdersScreen from './screens/OrdersScreen';
 
 
 
@@ -45,20 +45,28 @@ function App() {
 
             </div>
 
-            <div className="headerLinks">
-              <button className="signInbutt">
-                {/* IF THE USER IS SIGNED IN SHOW PROFILE PAGE IF NOT SHOW SIGN IN SCREEN */}
-                {
-                  userInfo ? <Link to="/profile" className="userButt">{userInfo.name}</Link> :
-                    <Link to="/signin" className="signButt">Sign In</Link>
-                }
-              </button>
-              <button className="cartButt">
-                <a href="cart.html"><img src="/images/bit-13-512.png" alt="cart icon"></img></a>
-              </button>
-            </div>
+          <div className="headerLinks">
+            <button className="signInbutt header-links">
+              {/* IF THE USER IS SIGNED IN SHOW PROFILE PAGE IF NOT SHOW SIGN IN SCREEN */}
+              {
+                userInfo ? <Link to="/profile" className="userButt">{userInfo.name}</Link> :
+                  <Link to="/signin" className="signButt">Sign In</Link>
+              }
 
-          </header>
+            </button>
+            <button className="cartButt">
+              <Link to = "cart/:id"><img src="/images/bit-13-512.png" alt="cart icon"></img></Link>
+            </button>
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <Link to ="/orders">Admin</Link>
+                
+              </div>
+            )}
+          </div>
+        </header>
+
+          
         </div>
         <main className="main">
           <div className="itemHeaderdiv">
@@ -75,19 +83,21 @@ function App() {
             </header>
           </div>
           <div className="content">
-            <Route path="/order/:id" component = {OrderScreen}/>
-            <Route path="/allitems" component = {AllItemsScreen}/>
-            <Route path="/products" component = {ProductsScreen}/>
-            <Route path="/shipping" component = {ShippingScreen}/>
-            <Route path="/payment" component = {PaymentScreen}/>
-            <Route path="/placeorder" component = {PlaceOrderScreen}/>
+            <Route path = "/orders" component = {OrdersScreen}/>
+            <Route path = "/profile" component = {ProfileScreen}/>
+            <Route path = "/order/:id" component = {OrderScreen}/>
+            <Route path ="/allitems" component = {AllItemsScreen}/>
+            <Route path = "/products" component = {ProductsScreen}/>
+            <Route path = "/shipping" component = {ShippingScreen}/>
+            <Route path = "/payment" component = {PaymentScreen}/>
+            <Route path = "/placeorder" component = {PlaceOrderScreen}/>
             <Route path="/signin" component={SigninScreen} />
             <Route path="/register" component={RegisterScreen} />
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <Route path="/Products" component={ProductsScreen} />
-            <Route path = "/testFish" component = {testFishData}/>
+             
+            
           </div>
 
 

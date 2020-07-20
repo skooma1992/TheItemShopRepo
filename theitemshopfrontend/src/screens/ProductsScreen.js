@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './products.css'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signin } from '../actions/userActions';
