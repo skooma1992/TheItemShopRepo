@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 import CartScreen from './screens/CartScreen';
-import Search from './actions/Search';
+
 import SigninScreen from './screens/SigninScreen';
 import { useSelector } from 'react-redux';
 import RegisterScreen from './screens/RegisterScreen';
@@ -11,8 +11,6 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import testFishData from './screens/fishTest';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
@@ -61,13 +59,8 @@ function App() {
             </button>
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
-                <a href="#"  >Admin</a>
-                <ul className="dropdown-content">
-                  <li>
-                    <Link to="/orders">Orders  </Link>
-                    <Link to="/products">  Products</Link>
-                  </li>
-                </ul>
+                <Link to ="/orders">Admin</Link>
+                
               </div>
             )}
           </div>
@@ -98,8 +91,8 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <Route path="/Products" component={ProductsScreen} />
-            <Route path = "/testFish" component = {testFishData}/>
+             
+            
           </div>
 
 
