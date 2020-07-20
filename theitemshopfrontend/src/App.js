@@ -14,6 +14,8 @@ import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
 import AllItemsScreen from './screens/AllItemsScreen';
 import OrderScreen from './screens/OrderScreen';
+import ProfileScreen from './screens/ProfileScreen';
+import OrdersScreen from './screens/OrdersScreen';
 
 
 
@@ -45,16 +47,28 @@ function App() {
           </div>
 
           <div className="headerLinks">
-            <button className="signInbutt">
+            <button className="signInbutt header-links">
               {/* IF THE USER IS SIGNED IN SHOW PROFILE PAGE IF NOT SHOW SIGN IN SCREEN */}
               {
                 userInfo ? <Link to="/profile" className="userButt">{userInfo.name}</Link> :
                   <Link to="/signin" className="signButt">Sign In</Link>
               }
+
             </button>
             <button className="cartButt">
-              <a href="cart.html"><img src="/images/bit-13-512.png" alt="cart icon"></img></a>
+              <Link to = "cart/:id"><img src="/images/bit-13-512.png" alt="cart icon"></img></Link>
             </button>
+            {userInfo && userInfo.isAdmin && (
+              <div className="dropdown">
+                <a href="#"  >Admin</a>
+                <ul className="dropdown-content">
+                  <li>
+                    <Link to="/orders">Orders  </Link>
+                    <Link to="/products">  Products</Link>
+                  </li>
+                </ul>
+              </div>
+            )}
           </div>
         </header>
 
@@ -66,9 +80,11 @@ function App() {
             </div>
           </div>
           <div className="content">
+            <Route path = "/orders" component = {OrdersScreen}/>
+            <Route path = "/profile" component = {ProfileScreen}/>
             <Route path = "/order/:id" component = {OrderScreen}/>
             <Route path ="/allitems" component = {AllItemsScreen}/>
-           <Route path = "/products" component = {ProductsScreen}/>
+            <Route path = "/products" component = {ProductsScreen}/>
             <Route path = "/shipping" component = {ShippingScreen}/>
             <Route path = "/payment" component = {PaymentScreen}/>
             <Route path = "/placeorder" component = {PlaceOrderScreen}/>
