@@ -27,17 +27,21 @@ button{
   grid-template-rows: 5rem 1fr 5rem;
   height: 100%;
   width: 100%;
-  
+  justify-items: center;
 }
 .main {
   width: 100%;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 .header{
   grid-area: header;
   height: 90px;
+  width: 1400px;
   border-radius: 35px;
-  width: 75%;
-  margin-left: 13%;
+  margin: auto;
   background-color: rgba(13, 195, 250, 0.657);
   color: white;
   display: flex;
@@ -45,17 +49,18 @@ button{
   align-items: center;
   padding: 15px;
 }
+
 .itemHeader {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-around;
-  height: 35px;
-  width: 75.8%;
+  height: 65px;
+  width: 75%;
   padding: 8px;
   background-color: rgba(31, 228, 31, 0.431);
   margin-top: 95px;
-  margin-left: 13%;
-  border-radius: 15px;
+ 
+  border-radius: 18px;
 }
 .searchbox {
   display: block;
@@ -108,10 +113,11 @@ button{
   color: white;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
+  text-align: center;
   text-decoration: none;
   text-shadow: -1px -1px 1px #0742ca;
   position: relative;
-  padding: 15px 30px;
+  padding: 5px;
   box-shadow: 5px 5px 0 rgba(73, 73, 73, 0.794);
   transition: all 0.3s ease;
   margin: 0 10px 0 0;
@@ -146,15 +152,19 @@ button{
 .main{
   grid-area: main;
 }
+.footerDiv ,.itemHeaderdiv,.headerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 .footer{
   background-color: rgba(13, 195, 250, 0.972);
   text-align: center;
   padding: 20px;
   position: absolute;
-  left: 12.2%;
-  bottom: 0;
-  top: 140%;
-  height: 30px;
-  width: 75.4%;
-  border-radius: 15px;
+  height: 70px;
+  width: 80%;
+  border-radius: 18px;
+  margin-top: 65px;
 }
