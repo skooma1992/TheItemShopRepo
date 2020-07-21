@@ -334,3 +334,17 @@ tbody>tr:nth-child(odd){
 .text-center{
   text-align: center;
 }
+
+.profile{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.profile-info{
+  flex: 1 1 30rem;
+}
+
+.profile-orders{
+  flex: 3 1 60rem;
+}
