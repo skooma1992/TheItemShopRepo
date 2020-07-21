@@ -53,20 +53,32 @@ button{
 .itemHeader {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   height: 65px;
   width: 75%;
   padding: 8px;
   background-color: rgba(31, 228, 31, 0.431);
   margin-top: 95px;
- 
+
   border-radius: 18px;
+}
+.itemHeader-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5px;
+}
+.swButt {
+  background-color: rgba(240, 255, 240, 0);
+  border: none;
+  margin: 0px 20px 0px 18px;
 }
 .searchbox {
   display: block;
   width: 60rem;
   padding: 5px;
-
+  height: 30px;
   margin: 0 1rem;  
   flex-grow: 1; /* <-- THE SECRET SAUCE! */
   min-width: 18rem;
