@@ -2,11 +2,13 @@
 
 var _express = _interopRequireDefault(require("express"));
 
-var _config = _interopRequireDefault(require("./config"));
+var _path = _interopRequireDefault(require("path"));
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
 var _bodyParser = _interopRequireDefault(require("body-parser"));
+
+var _config = _interopRequireDefault(require("./config"));
 
 var _userRoute = _interopRequireDefault(require("./routes/userRoute"));
 
@@ -14,41 +16,28 @@ var _productRoute = _interopRequireDefault(require("./routes/productRoute"));
 
 var _orderRoute = _interopRequireDefault(require("./routes/orderRoute"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// CONNECTING TO MONGO
-var mongodbUrl = _config["default"].MONGODB_URL;
+const mongodbUrl = _config.default.MONGODB_URL;
 
-_mongoose["default"].connect(mongodbUrl, {
+_mongoose.default.connect(mongodbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true
-})["catch"](function (error) {
-  return console.log(error.reason);
+}).catch(error => console.log(error.reason));
+
+const app = (0, _express.default)();
+app.use(_bodyParser.default.json());
+app.use('/api/users', _userRoute.default);
+app.use('/api/products', _productRoute.default);
+app.use('/api/orders', _orderRoute.default);
+app.get('/api/config/paypal', (req, res) => {
+  res.send(_config.default.PAYPAL_CLIENT_ID);
 });
-
-var app = (0, _express["default"])();
-app.use(_bodyParser["default"].json()); // ROUTE FOR USERS
-
-app.use("/api/users", _userRoute["default"]);
-app.use("/api/products", _productRoute["default"]);
-app.use("/api/orders", _orderRoute["default"]);
-app.get("/api/config/paypal", function (req, res) {
-  res.send(_config["default"].PAYPAL_CLIENT_ID);
-}); // ROUTE FOR PRODUCT IDS
-// app.get("/api/products/:id", (req, res) =>{
-// const productId = req.params.id;
-//const product = data.products.find(x=>x._id ===productId);
-//if(product)
-//res.send(product);
-//else
-//res.status(404).send({msg: "Product not found"})
-//});
-// ROUTE FOR PRODUCTS
-//app.get("/api/products", (req, res) =>{
-// res.send(data.products)
-//});
-
-app.listen(5000, function () {
-  console.log("Server start at http://localhost:5000");
+app.use(_express.default.static(_path.default.join(__dirname, '/../theitemshopfrontend/build')));
+app.get('*', (req, res) => {
+  res.sendFile(_path.default.join(`${__dirname}/../theitemshopfrontend/build/index.html`));
+});
+app.listen(_config.default.PORT, () => {
+  console.log('Server started at http://localhost:5000');
 });

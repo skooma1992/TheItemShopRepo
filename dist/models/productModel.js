@@ -1,8 +1,8 @@
 "use strict";
 
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var productSchema = new mongoose.Schema({
+const productSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true
@@ -17,7 +17,7 @@ var productSchema = new mongoose.Schema({
   },
   price: {
     type: Number,
-    "default": 0,
+    default: 0,
     required: true
   },
   category: {
@@ -26,7 +26,7 @@ var productSchema = new mongoose.Schema({
   },
   countInStock: {
     type: Number,
-    "default": 0,
+    default: 0,
     required: true
   },
   description: {
@@ -35,14 +35,14 @@ var productSchema = new mongoose.Schema({
   },
   rating: {
     type: Number,
-    "default": 0,
+    default: 0,
     required: true
   },
   numReviews: {
     type: Number,
-    "default": 0,
+    default: 0,
     required: true
   }
 });
-var productModel = mongoose.model("Product", productSchema);
+const productModel = mongoose.model("Product", productSchema);
 module.exports = productModel;
