@@ -123,6 +123,8 @@ function OrderScreen(props) {
               <div>Order Total</div>
               <div>${order.totalPrice}</div>
             </li>
+
+          
           </ul>
 
 
