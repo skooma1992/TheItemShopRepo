@@ -61,19 +61,7 @@ function App() {
           </header>
         </div>
         <main className="main">
-          <div className="itemHeaderdiv">
-            <header className="itemHeader">
-              <div className="itemHeader-links"> 
-                <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" alt="carrot icon"></img></Link></button>
-                <button className="swButt"><Link to="/allitems" className="stButt"><img src="/images/staffIcon.png" alt="carrot icon"></img></Link></button>
-                <button className="swButt"><Link to="/allitems" className="vButt"><img src="/images/carrotIcon.png" alt="carrot icon"></img></Link></button>
-                <button className="swButt"><Link to="/testFish" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>
-                <button className="swButt"><Link to="/allitems" className="mButt"><img src="/images/meatIcon.png" alt="meat icon"></img></Link></button>
-                <button className="swButt"><Link to="/allitems" className="sButt"><img src="/images/stairIcon.png" alt="stair icon"></img></Link></button>
-                <button className="swButt"><Link to="/allitems" className="bButt"><img src="/images/broomIcon.png" alt="broom icon"></img></Link></button>
-              </div>
-            </header>
-          </div>
+          
           <div className="content">
             <Route path="/order/:id" component = {OrderScreen}/>
             <Route path="/allitems" component = {AllItemsScreen}/>

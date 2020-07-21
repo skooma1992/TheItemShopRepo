@@ -79,7 +79,7 @@ const products
 ]
 
 
-db.remove({}).then(()=>model.products.collection.insertmany(products)).then(data => {
+db.remove({}).then(()=>mongoose.models.insertmany(products)).then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
