@@ -11,10 +11,18 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
+<<<<<<< HEAD
+import guideFishList from './screens/guideFishList';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import AllItemsScreen from './screens/AllItems';
+import OrderScreen from './screens/OrderScreen';
+import guideFishPage from './screens/guideFishPage';
+=======
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
+>>>>>>> fcd05a9761ec2eb0653aa03044c0e77bdbf086da
 
 
 
@@ -84,8 +92,14 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
+<<<<<<< HEAD
+            <Route path="/Products" component={ProductsScreen} />
+            <Route path = "/fish-guide" component = {guideFishList}/>
+            <Route path = "/fish/:id" component = {guideFishPage}/>
+=======
              
             
+>>>>>>> fcd05a9761ec2eb0653aa03044c0e77bdbf086da
           </div>
 
 
