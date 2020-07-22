@@ -1,12 +1,13 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
+  background-color: rgba(203, 235, 173, 0.274);
 }
 body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: rgba(203, 235, 173, 0.212);
+  background-color: rgba(203, 235, 173, 0.274);
 }
 button{
   font-size: 1.6rem;
@@ -28,6 +29,7 @@ button{
   height: 100%;
   width: 100%;
   justify-items: center;
+  background-color: rgba(203, 235, 173, 0.233);
 }
 .main {
   width: 100%;
@@ -35,12 +37,13 @@ button{
   display: flex;
   justify-content: center;
   flex-direction: column;
+
 }
 
 .header{
   grid-area: header;
   height: 90px;
-  width: 1400px;
+  width: 140rem;
   border-radius: 15px;
   margin: 5px 0px 0px 0px;
   background-color: rgba(13, 195, 250, 0.657);
@@ -150,15 +153,17 @@ button{
   padding: 20px;
   position: absolute;
   height: 70px;
-  width: 80%;
-  min-width: 80%;
-  border-radius: 18px;
-  margin-top: 25px;
+  width: 140rem;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 .footerDiv {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 161%;
+  margin-bottom: 0px;
 }
 
 

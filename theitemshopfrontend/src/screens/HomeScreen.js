@@ -50,7 +50,7 @@ function HomeScreen(props) {
             <button className="allItemsbutt"><Link to="/allitems">All Items</Link></button>
             <button className="ratingFilterbutt"><Link to="/allitems">Rating High-Low</Link></button>
             <button className="priceFilterbutt"><Link to="/allitems">Price Low-High</Link></button>
-            <button className="priceFilterbutt"><Link to = "/allitems">Newest Products</Link></button>
+            <button className="newestFilterbutt"><Link to = "/allitems">Newest Products</Link></button>
           </div>
         </div>
       </div>
