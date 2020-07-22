@@ -15,6 +15,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 import guideFishPage from './screens/guideFishPage';
+import SortedItemsScreen from './screens/SortedItemsScreen';
+import OrdersScreen from './screens/OrdersScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 
 
