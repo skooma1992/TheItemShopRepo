@@ -1,9 +1,7 @@
 import React from "react";
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row'
-import Container from 'react-bootstrap/Container'
-import Col from 'react-bootstrap/Col'
+import { Link } from 'react-router-dom';
 
 export default function FishCard(props) {
 
@@ -13,9 +11,11 @@ export default function FishCard(props) {
                         <Card.Body>
                             <Card.Title>{props.name["name-USen"]}</Card.Title>
                             <Card.Text>
-                                {props["museum-phrase"]}
+                                Rarity: {props.rarity}
+                                <br />
+                                Price: ${props.price}
                             </Card.Text>
-                            <Button variant="primary">This doesn't work yet</Button>
+                            <Link to={"/fish/" + props.id}><Button variant="primary">See More!</Button></Link>
                         </Card.Body>
                     </Card >
         )

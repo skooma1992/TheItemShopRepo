@@ -11,10 +11,11 @@ import ProductsScreen from './screens/ProductsScreen';
 import ShippingScreen from './screens/ShippingScreen';
 import PaymentScreen from './screens/PaymentScreen';
 import PlaceOrderScreen from './screens/PlaceOrderScreen';
-import testFishData from './screens/fishTest';
+import guideFishList from './screens/guideFishList';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
+import guideFishPage from './screens/guideFishPage';
 
 
 
@@ -82,7 +83,8 @@ function App() {
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
             <Route path="/Products" component={ProductsScreen} />
-            <Route path = "/testFish" component = {testFishData}/>
+            <Route path = "/fish-guide" component = {guideFishList}/>
+            <Route path = "/fish/:id" component = {guideFishPage}/>
           </div>
 
 
