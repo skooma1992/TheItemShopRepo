@@ -1,51 +1,42 @@
 import React, { useEffect } from 'react';
-import './placeorder.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import CheckoutSteps from '../components/CheckoutSteps';
-import {createOrder} from '../actions/orderActions';
-
-
+import { createOrder } from '../actions/orderActions';
 function PlaceOrderScreen(props) {
 
-    const cart = useSelector(state => state.cart);
-    const orderCreate = useSelector(state => state.orderCreate);
-    const{ loading, success, error, order} = orderCreate;
-    
-    const { cartItems, shipping, payment} = cart;
-    if (!shipping){
-      props.hist.push("/shipping");
-    } else if(!payment){
-      props.location.push("/payment")
+  const cart = useSelector(state => state.cart);
+  const orderCreate = useSelector(state => state.orderCreate);
+  const { loading, success, error, order } = orderCreate;
+
+  const { cartItems, shipping, payment } = cart;
+  if (!shipping.address) {
+    props.history.push("/shipping");
+  } else if (!payment.paymentMethod) {
+    props.history.push("/payment");
+  }
+  const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
+  const shippingPrice = itemsPrice > 100 ? 0 : 10;
+  const taxPrice = 0.15 * itemsPrice;
+  const totalPrice = itemsPrice + shippingPrice + taxPrice;
+
+  const dispatch = useDispatch();
+
+  const placeOrderHandler = () => {
+    // create an order
+    dispatch(createOrder({
+      orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
+      taxPrice, totalPrice
+    }));
+  }
+  useEffect(() => {
+    if (success) {
+      props.history.push("/order/" + order._id);
     }
 
-      const itemsPrice = cartItems.reduce((a, c) => a +c.price*c.qty, 0);
-      const shippingPrice = itemsPrice > 100 ?0 : 10;
-      const taxPrice = 0.15 * itemsPrice;
-      const totalPrice = itemsPrice + shippingPrice + taxPrice
-   
-    const dispatch = useDispatch();
-    
-    const placeOrderHandler = () =>{
-      dispatch(createOrder({
-        orderItems: cartItems, shipping, payment, itemsPrice, shippingPrice,
-        taxPrice,totalPrice
-      }))
-    }
-    useEffect(() => {
-      if(success){
-        props.history.push("/order/" + order._id)
-      }
-    }, [success])
+  }, [success]);
 
-    // Redirect to Shipping
-    const checkoutHandler = () => {
-        props.history.push("/signin?redirect=shipping");
-    }
-
-
-
-    return <div>
+  return <div className="top-placeholder">
     <CheckoutSteps step1 step2 step3 step4 ></CheckoutSteps>
     <div className="placeorder">
       <div className="placeorder-info">
@@ -105,7 +96,7 @@ function PlaceOrderScreen(props) {
           </ul>
         </div>
 
-
+      
       </div>
       <div className="placeorder-action">
         <ul>
@@ -142,4 +133,4 @@ function PlaceOrderScreen(props) {
 
 }
 
-export default PlaceOrderScreen; 
+export default PlaceOrderScreen;

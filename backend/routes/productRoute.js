@@ -19,6 +19,7 @@ router.get("/", async (req, res) => {
   const products = await Product.find({ ...category, ...searchKeyword }).sort(sortOrder);
   res.send(products);
 });
+
 router.get("/:id", async (req, res) => {
     const product = await Product.findOne({_id: req.params.id});
     if (product){

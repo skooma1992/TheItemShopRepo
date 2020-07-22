@@ -11,6 +11,7 @@
     align-items: center;
     flex-wrap: wrap;
     border-radius: 45px;
+    margin-top: 55px;
 }
 
 .contentDiv {
@@ -22,6 +23,7 @@
     width: 45%;
     margin: auto;
     border-radius: 45px;
+    
 }
 .itemHeader {
   display: flex;
@@ -97,6 +99,7 @@
   flex-wrap: wrap;
   margin: 0px -15px;
   background-color: rgb(244, 253, 227);
+  margin-top: 100px;
   
 }
 .product{

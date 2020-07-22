@@ -15,6 +15,7 @@ import AllItemsScreen from './screens/AllItems';
 import OrderScreen from './screens/OrderScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
+import SortedItemsScreen from './screens/SortedItemsScreen';
 
 
 
@@ -71,6 +72,7 @@ function App() {
         <main className="main">
           
           <div className="content">
+            <Route path = "/sorted" component = {SortedItemsScreen}/>
             <Route path = "/orders" component = {OrdersScreen}/>
             <Route path = "/profile" component = {ProfileScreen}/>
             <Route path = "/order/:id" component = {OrderScreen}/>
@@ -79,11 +81,14 @@ function App() {
             <Route path = "/shipping" component = {ShippingScreen}/>
             <Route path = "/payment" component = {PaymentScreen}/>
             <Route path = "/placeorder" component = {PlaceOrderScreen}/>
-            <Route path="/signin" component={SigninScreen} />
-            <Route path="/register" component={RegisterScreen} />
-            <Route path="/product/:id" component={ProductScreen} />
-            <Route path="/cart/:id?" component={CartScreen} />
-            <Route path="/" exact={true} component={HomeScreen} />
+            <Route path ="/signin" component={SigninScreen} />
+            <Route path ="/register" component={RegisterScreen} />
+            <Route path ="/product/:id" component={ProductScreen} />
+            <Route path ="/cart/:id?" component={CartScreen} />
+            <Route path ="/category/:id" compononent= {SortedItemsScreen}/>
+            <Route path ="/" exact={true} component={HomeScreen} />
+          
+            
              
             
           </div>
@@ -92,7 +97,13 @@ function App() {
         </main>
         <div className="footerDiv">
           <footer className="footer">
-            All Rights Reserved
+            <div className="footer-top">
+              <div classname="footer-colone">1</div>
+              <div classname="footer-coltwo">2</div>
+              <div classname="footer-colthree">3</div>
+              <div classname="footer-colfour">4</div>
+            </div>
+           
           </footer>
         </div>
       </div>
