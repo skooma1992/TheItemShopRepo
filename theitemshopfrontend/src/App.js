@@ -30,11 +30,11 @@ function App() {
       <div className="grid-container">
         <div className="headerDiv">
           <header className="header">
-            <div className="brand">
+            <button className="logo">
 
               <Link to="/"><img src="/images/item-shop-logo.png" alt="itemshoplogo"></img></Link>
 
-            </div>
+            </button>
             <div className="searchbox-wrap">
               <input type="text"
                 placeholder="Search for an Item..."
@@ -59,7 +59,7 @@ function App() {
             </button>
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
-                <Link to ="/orders">Admin</Link>
+                <button className="adminButt"><Link to ="/orders">Admin</Link></button>
                 
               </div>
             )}
