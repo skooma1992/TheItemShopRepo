@@ -3,10 +3,6 @@ import './product.css'
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { detailsProduct } from '../actions/productActions';
-<<<<<<< HEAD
-=======
-
->>>>>>> fcd05a9761ec2eb0653aa03044c0e77bdbf086da
 
 function ProductScreen(props) {
     const [qty, setQty] = useState(1);
