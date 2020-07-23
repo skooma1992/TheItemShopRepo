@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {  listOrders, deleteOrder } from '../actions/orderActions';
 
 function OrdersScreen(props) {
-  console.log("dd")
+  
   const orderList = useSelector(state => state.orderList);
   const { loading, orders } = orderList;
 
