@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import { saveProduct, listProducts, deleteProdcut } from '../actions/productActions';
+import axios from 'axios';
 
 function ProductsScreen(props) {
   const [modalVisible, setModalVisible] = useState(false);
@@ -14,6 +15,7 @@ function ProductsScreen(props) {
   const [category, setCategory] = useState('');
   const [countInStock, setCountInStock] = useState('');
   const [description, setDescription] = useState('');
+  const [uploading, setUploading] = useState(false);
   const productList = useSelector(state => state.productList);
   const { loading, products, error } = productList;
 
@@ -52,6 +54,24 @@ function ProductsScreen(props) {
       name, price, image, brand, category,
       countInStock, description
     }));
+  }
+
+  const uploadFileHandler = (e) =>{
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+    bodyFormData.append('image', file);
+    setUploading(true)
+    axios.post("api/uploads", bodyFormData,{
+      headers:{
+        'Content-Type': 'multipart/form-data'
+      }
+    }).then(response =>{
+      setImage(response.data);
+      setUploading(false)
+    }).catch(err=>{
+      console.log(err);
+      setUploading(false)
+    })
   }
   const deleteHandler = (product) => {
     dispatch(deleteProdcut(product._id));
@@ -94,6 +114,8 @@ function ProductsScreen(props) {
           </label>
               <input type="text" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
               </input>
+              <input type ="file" onChange ={uploadFileHandler}></input>
+              {uploading && <div>Uploading...</div>}
             </li>
             <li>
               <label htmlFor="brand">
