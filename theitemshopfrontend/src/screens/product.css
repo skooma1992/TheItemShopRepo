@@ -1,14 +1,22 @@
 /* PRODUCT DETAILS */
 
+.productDiv {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8%;
+}
 .details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-direction: row;
   flex-wrap: wrap;
   padding: 1rem;
 }
 .details-image {
   flex: 2 1 60rem;
+  max-width: 400px;
+  max-height: 400px;
 }
 .details-image img {
   max-width: 60rem;
@@ -16,6 +24,7 @@
 }
 .details-info {
   flex: 1 1 30rem;
+  
 }
 .details-action {
   flex: 1 1 30rem;

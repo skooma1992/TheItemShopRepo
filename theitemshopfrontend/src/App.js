@@ -78,7 +78,6 @@ function App() {
             <Route path = "/orders" component = {OrdersScreen}/>
             <Route path = "/profile" component = {ProfileScreen}/>
             <Route path = "/orders" component = {OrderScreen}/>
-            {/* <Route path = "/profile" component = {ProfileScreen}/> */}
             <Route path = "/order/:id" component = {OrderScreen}/>
             <Route path ="/allitems" component = {AllItemsScreen}/>
             <Route path = "/products" component = {ProductsScreen}/>
@@ -90,7 +89,6 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <Route path="/Products" component={ProductsScreen} />
             <Route path = "/fish-guide" component = {guideFishList}/>
             <Route path = "/fish/:id" component = {guideFishPage}/>
           </div>
