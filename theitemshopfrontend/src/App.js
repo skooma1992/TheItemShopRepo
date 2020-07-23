@@ -98,10 +98,10 @@ function App() {
         <div className="footerDiv">
           <footer className="footer">
             <div className="footer-top">
-              <div classname="footer-colone">1</div>
-              <div classname="footer-coltwo">2</div>
-              <div classname="footer-colthree">3</div>
-              <div classname="footer-colfour">4</div>
+              <div classname="footer-colone"><p>testy1</p><p>testy1.2</p></div>
+              <div classname="footer-coltwo"><p>testy2</p><p>testy2.2</p></div>
+              <div classname="footer-colthree"><p>testy3</p><p>testy3.2</p></div>
+              <div classname="footer-colfour"><p>testy4</p><p>testy4.2</p></div>
             </div>
            
           </footer>
