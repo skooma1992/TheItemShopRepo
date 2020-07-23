@@ -43,17 +43,17 @@
   display: flex;
   flex-direction: column;
 }
-  .button{
-    padding: 1rem;
-    border: .1rem #808080 solid;
-    cursor: pointer;
-    border-radius: .5rem;
-  
-  }
-  
-  .button.secondary{
-    background-color: #f0f0f0;
-  }
-  .text-center{
-    text-align: center;
-  }
+.button{
+  padding: 1rem;
+  border: .1rem #808080 solid;
+  cursor: pointer;
+  border-radius: .5rem;
+
+}
+
+.button.secondary{
+  background-color: #f0f0f0;
+}
+.text-center{
+  text-align: center;
+}
