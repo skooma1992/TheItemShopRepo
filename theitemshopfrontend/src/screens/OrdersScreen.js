@@ -23,7 +23,7 @@ function OrdersScreen(props) {
   const deleteHandler = (order) => {
     dispatch(deleteOrder(order._id));
   }
-  return loading ? <div>Loading...</div> :
+  return loading ? <div></div> :
     <div className="content content-margined">
 
       <div className="order-header">
