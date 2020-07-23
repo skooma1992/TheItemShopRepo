@@ -90,7 +90,6 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <Route path="/Products" component={ProductsScreen} />
             <Route path = "/fish-guide" component = {guideFishList}/>
             <Route path = "/fish/:id" component = {guideFishPage}/>
           </div>
