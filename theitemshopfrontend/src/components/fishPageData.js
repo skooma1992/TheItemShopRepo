@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from './API';
-import "../component_css/fishpage.css"
 
 function FishPageData() {
 
@@ -15,10 +14,16 @@ function FishPageData() {
     }, [])
 
     return (
-        <div style={{margin: "25px"}}>
-            <div style={{margin: "50px"}}>
-                <img src={fish.image_uri} style={{}}/>
-                {fish.name && <div>{fish.name["name-USen"]}</div>}
+        <div style={{ marginLeft: "25px", marginRight: "25px" }}>
+            <div style={{ marginLeft: "50px", marginRight: "50px" }}>
+                <div className="d-flex justify-content-center" style={{ marginBottom: "254px" }}>
+                    {fish.name && <h1>{fish.name["name-USen"]}</h1>}
+                </div>
+                <div className="d-flex justify-content-start" style={{}}>
+                    <div>
+                        <img src={fish.icon_uri} />
+                    </div>
+                </div>
                 <p>{fish["museum-phrase"]}</p>
             </div>
         </div>
