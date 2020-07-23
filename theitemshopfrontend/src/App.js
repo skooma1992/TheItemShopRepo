@@ -78,7 +78,6 @@ function App() {
             <Route path = "/orders" component = {OrdersScreen}/>
             <Route path = "/profile" component = {ProfileScreen}/>
             <Route path = "/orders" component = {OrderScreen}/>
-            {/* <Route path = "/profile" component = {ProfileScreen}/> */}
             <Route path = "/order/:id" component = {OrderScreen}/>
             <Route path ="/allitems" component = {AllItemsScreen}/>
             <Route path = "/products" component = {ProductsScreen}/>
@@ -90,7 +89,6 @@ function App() {
             <Route path="/product/:id" component={ProductScreen} />
             <Route path="/cart/:id?" component={CartScreen} />
             <Route path="/" exact={true} component={HomeScreen} />
-            <Route path="/Products" component={ProductsScreen} />
             <Route path = "/fish-guide" component = {guideFishList}/>
             <Route path = "/fish/:id" component = {guideFishPage}/>
           </div>
@@ -100,10 +98,10 @@ function App() {
         <div className="footerDiv">
           <footer className="footer">
             <div className="footer-top">
-              <div classname="footer-colone">1</div>
-              <div classname="footer-coltwo">2</div>
-              <div classname="footer-colthree">3</div>
-              <div classname="footer-colfour">4</div>
+              <div classname="footer-colone"><p>testy1</p><p>testy1.2</p></div>
+              <div classname="footer-coltwo"><p>testy2</p><p>testy2.2</p></div>
+              <div classname="footer-colthree"><p>testy3</p><p>testy3.2</p></div>
+              <div classname="footer-colfour"><p>testy4</p><p>testy4.2</p></div>
             </div>
            
           </footer>

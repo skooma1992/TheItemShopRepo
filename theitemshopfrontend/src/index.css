@@ -1,12 +1,13 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
+  background-color: rgba(203, 235, 173, 0.274);
 }
 body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: rgba(203, 235, 173, 0.212);
+  background-color: rgba(203, 235, 173, 0.274);
 }
 button{
   font-size: 1.6rem;
@@ -28,6 +29,7 @@ button{
   height: 100%;
   width: 100%;
   justify-items: center;
+  background-color: rgba(203, 235, 173, 0.233);
 }
 .main {
   width: 100%;
@@ -36,11 +38,10 @@ button{
   justify-content: center;
   flex-direction: column;
 }
-
 .header{
   grid-area: header;
   height: 90px;
-  width: 1400px;
+  width: 140rem;
   border-radius: 15px;
   margin: 5px 0px 0px 0px;
   background-color: rgba(13, 195, 250, 0.657);
@@ -105,7 +106,7 @@ button{
   height: 55px;
   width: 130px;
   border-radius: 10px;
-  background-color: #f8a826;
+  background-color: #fb9c04;;
   color: white;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
@@ -127,8 +128,7 @@ button{
   height: 55px;
   width: 100px;
   border-radius: 10px;
-  color: white;
-  background-color: #f8a826;
+  background-color: #fb9c04;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
   text-decoration: none;
@@ -150,17 +150,24 @@ button{
   padding: 20px;
   position: absolute;
   height: 70px;
-  width: 80%;
-  min-width: 80%;
-  border-radius: 18px;
-  margin-top: 25px;
+  width: 140rem;
+  border-radius: 15px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 .footerDiv {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 161%;
+  margin-bottom: 0px;
 }
-
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
 
 .checkout-steps{
   display: flex;
@@ -387,4 +394,33 @@ tbody>tr:nth-child(odd){
 }
 .top-placeholder{
   width: 75%;
+}
+
+/* rating */
+
+/* Reviews */
+ul.review {
+  list-style-type: none;
+  padding: 0;
+}
+.review li {
+  margin: 1rem;
+  margin-bottom: 2rem;
+}
+.review li > div {
+  margin: 0.5rem;
+}
+
+/* Rating */
+.rating span {
+  color: #ffb901;
+  font-size: 1.8rem;
+  margin: 0.1rem;
+}
+.rating span:last-child {
+  color: #444444;
+  font-size: 1.4rem;
+}
+a > .rating > span:last-child {
+  color: #0000ff;
 }
