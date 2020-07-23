@@ -30,7 +30,7 @@ function HomeScreen(props) {
             <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" alt="carrot icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="stButt"><img src="/images/staffIcon.png" alt="carrot icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="vButt"><img src="/images/carrotIcon.png" alt="carrot icon"></img></Link></button>
-            <button className="swButt"><Link to="/testFish" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>
+            <button className="swButt"><Link to="/fish-guide" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="mButt"><img src="/images/meatIcon.png" alt="meat icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="sButt"><img src="/images/stairIcon.png" alt="stair icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="bButt"><img src="/images/broomIcon.png" alt="broom icon"></img></Link></button>

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from './API';
+import { propTypes } from "react-bootstrap/esm/Image";
 
 function FishPageData() {
 
@@ -15,7 +16,9 @@ function FishPageData() {
 
     return (
         <div>
+            <img src={fish.image_uri} />
             {fish.name && <div>{fish.name["name-USen"]}</div>}
+            <p>{fish["museum-phrase"]}</p>
         </div>
     )
 }
