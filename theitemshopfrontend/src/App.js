@@ -78,7 +78,6 @@ function App() {
             <Route path = "/orders" component = {OrdersScreen}/>
             <Route path = "/profile" component = {ProfileScreen}/>
             <Route path = "/orders" component = {OrderScreen}/>
-            {/* <Route path = "/profile" component = {ProfileScreen}/> */}
             <Route path = "/order/:id" component = {OrderScreen}/>
             <Route path ="/allitems" component = {AllItemsScreen}/>
             <Route path = "/products" component = {ProductsScreen}/>
