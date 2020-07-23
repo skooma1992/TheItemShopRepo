@@ -9,11 +9,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
     border-radius: 45px;
-    margin-top: 55px;
+    
 }
-
 .contentDiv {
     display: flex;
     flex-direction: column;
@@ -29,11 +27,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 65px;
-  width: 100%;
-  padding: 8px;
+  height: 70px;
+  width: 140rem;
+  padding: 12px;
   background-color: rgba(31, 228, 31, 0.431);
-  margin-top: 100px;
+  margin-top: 10px;
   border-radius: 15px;
 }
 .itemHeader-links {
@@ -41,49 +39,47 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  padding: 5px;
+  padding: 10px;
 }
 .itemHeaderdiv {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 161%;
+  margin-top: 55px;
 }
 .storeFrontdiv {
     height: 100%;
-    width: 145%;
-    margin-top: 25px;
-    margin-bottom: 25px;
+    width: 130rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
     border-radius: 35px;
     background-image: url(../images/pixel-background.jpg);
 }
- 
-  
 .homepageButts {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 65px 0px 45px 0px;
 }
-.priceFilterbutt,.ratingFilterbutt,.allItemsbutt{
-  height: 118px;
-  width: 118px;
-  border-radius: 100%;
+.priceFilterbutt,.ratingFilterbutt,.allItemsbutt,.newestFilterbutt{
+  height: 100px;
+  width: 120px;
+  border-radius: 10%;
   color: rgb(0, 3, 3);
-  background-color:  #c80808ec;
+  background-color: #fb9c04;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 24px;
   text-decoration: none;
   text-shadow: -1px -1px 1px #470505;
   position: relative;
-  padding: 1px;
+  padding: 4px;
   box-shadow: 5px 5px 0 rgba(15, 14, 14, 0.534);
   transition: all 0.3s ease;
   margin: 0 45px 0 5px;
   cursor: pointer;
 }
 
-.priceFilterbutt:hover, .ratingFilterbutt:hover, .allItemsbutt:hover {
+.priceFilterbutt:hover, .ratingFilterbutt:hover, .allItemsbutt:hover, .newestFilterbutt:hover {
   color: rgb(189, 187, 187);
   text-shadow: rgb(70, 68, 68);
   box-shadow: 0px 0px 0px rgb(2, 175, 11);
