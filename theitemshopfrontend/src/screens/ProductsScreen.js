@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import "./products.css"
 import { useSelector, useDispatch } from 'react-redux';
 
 import { saveProduct, listProducts, deleteProdcut } from '../actions/productActions';
@@ -80,7 +80,7 @@ function ProductsScreen(props) {
    <div className="content content-margined">
 
     <div className="product-header">
-      <h3>Products</h3>
+      
       <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&

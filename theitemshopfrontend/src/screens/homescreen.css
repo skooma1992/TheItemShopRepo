@@ -23,7 +23,7 @@
   height: 70px;
   width: 140rem;
   padding: 12px;
-  background-color: rgba(31, 228, 31, 0.431);
+  background-color: rgba(31, 228, 118, 0.431);
   margin-top: 10px;
   border-radius: 15px;
 }
@@ -57,13 +57,14 @@ a.signButt {
     align-items: center;
     margin: 65px 0px 45px 0px;
     color: black;
+    margin-left: 40px;
 }
 
 .priceFilterbutt,.ratingFilterbutt,.allItemsbutt,.newestFilterbutt{
   height: 100px;
   width: 120px;
   flex-wrap: wrap;
-  border-radius: 10%;
+  border-radius: 20%;
   color: rgb(7, 7, 7);
   background-color: #fb9c04;
   font-size: 24px;
