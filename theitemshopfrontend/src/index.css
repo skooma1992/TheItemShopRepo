@@ -12,6 +12,9 @@ body{
 button{
   font-size: 1.6rem;
 }
+a {
+  color: black;
+}
 .full-width {
   width: 100%;
 }
@@ -34,7 +37,6 @@ button{
 .main {
   width: 100%;
   margin-bottom: 25px;
-  display: flex;
   justify-content: center;
   flex-direction: column;
 }
@@ -72,7 +74,7 @@ button{
   border-radius: 8px;
   color: #53565A;
   font-size: 20px;
-  font-weight: 300;
+
   transition: 0.4s ease-out;
 }
 
@@ -83,33 +85,23 @@ button{
   background-color: rgba(240, 255, 240, 0);
   border: none;
 }
-.brand:logo {
-  cursor: pointer;
-}
-.brand a{
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
-  text-decoration: none;
-  flex-shrink: 0;
-  margin-left: 3px;
 
-}
 .headerLinks {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  
+  text-decoration: none;
 }
 .signInbutt {
   height: 55px;
-  width: 130px;
+  width: 135px;
+  flex-wrap: wrap;
   border-radius: 10px;
   background-color: #fb9c04;;
-  color: white;
+  color: rgb(0, 0, 0);
   font-family: Helvetica, Arial, Sans-Serif;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   text-decoration: none;
   text-shadow: -1px -1px 1px #0742ca;
@@ -119,12 +111,12 @@ button{
   transition: all 0.3s ease;
   margin: 0 10px 0 0;
 }
-.signInbutt:hover, .cartButt:hover, .adminButt:hover {
+.signInbutt:hover, .cartButt:hover, .adminButt:hover, .button.primary:hover, .button:hover, .signUpbutton:hover {
   box-shadow: 0px 0px 0 #666;
   top: 5px;
   left: 5px;
 }
-.cartButt,.adminButt {
+.cartButt,.adminButt, .button {
   height: 55px;
   width: 100px;
   border-radius: 10px;
@@ -139,7 +131,10 @@ button{
   transition: all 0.3s ease;
   margin: 0 10px 0 5px;
 }
-
+.Link {
+  color: black;
+  text-decoration: none !important;
+}
 .main{
   grid-area: main;
 }
@@ -241,11 +236,7 @@ tbody>tr:nth-child(odd){
   flex: 2 1 10rem;
   
 }
-.details-image img{
-  max-width: 60rem;
-  width: 100%;
-  widows: 100%;
-}
+
 .details-info{
   flex: 1 1 30rem;
 }
@@ -278,25 +269,23 @@ tbody>tr:nth-child(odd){
   border: .1rem #808080 solid;
   cursor: pointer;
   border-radius: .5rem;
-
 }
 
 .button.primary{
+  display: flex;
   height: 55px;
   width: 130px;
   border-radius: 10px;
   background-color: #f8a826;
-  color: antiquewhite;
+  color: black;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
-  text-align: center;
   text-decoration: none;
   text-shadow: -1px -1px 1px #0742ca;
-  position: relative;
-  padding: 5px;
   box-shadow: 5px 5px 0 rgba(73, 73, 73, 0.794);
   transition: all 0.3s ease;
   margin: auto;
+  justify-content: center;
 }
 .button.primary.hover
 {
@@ -324,7 +313,6 @@ tbody>tr:nth-child(odd){
 .profile-orders{
   flex: 3 1 60rem;
 }
-
 
 
 
@@ -423,4 +411,22 @@ ul.review {
 }
 a > .rating > span:last-child {
   color: #0000ff;
+}
+
+
+/*payment*/
+
+.payDiv {
+  margin-top: 15px;
+}
+.shipDiv {
+  margin-top: 15px;
+}
+.finOrderdiv {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 65px;
+}
+.proOrders {
+  margin-top: 65px;
 }
