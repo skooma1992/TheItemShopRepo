@@ -61,7 +61,7 @@ function ProductsScreen(props) {
     const bodyFormData = new FormData();
     bodyFormData.append('image', file);
     setUploading(true)
-    axios.post("api/uploads", bodyFormData,{
+    axios.post("/api/uploads", bodyFormData,{
       headers:{
         'Content-Type': 'multipart/form-data'
       }
@@ -84,7 +84,7 @@ function ProductsScreen(props) {
       <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
-      <div className="form-products">
+      <div className="form">
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>
@@ -110,14 +110,17 @@ function ProductsScreen(props) {
               </input>
             </li>
             <li>
-              <label htmlFor="image">
-                Image
-          </label>
-              <input type="text" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
-              </input>
-              <input type ="file" onChange ={uploadFileHandler}></input>
-              {uploading && <div>Uploading...</div>}
-            </li>
+                <label htmlFor="image">Image</label>
+                <input
+                  type="text"
+                  name="image"
+                  value={image}
+                  id="image"
+                  onChange={(e) => setImage(e.target.value)}
+                ></input>
+                <input type="file" onChange={uploadFileHandler}></input>
+                {uploading && <div>Uploading...</div>}
+              </li>
             <li>
               <label htmlFor="brand">
                 Brand

@@ -1,13 +1,13 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
-  background-color: rgba(203, 235, 173, 0.274);
+  ;
 }
 body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: rgba(203, 235, 173, 0.274);
+ ;
 }
 button{
   font-size: 1.6rem;

@@ -61,7 +61,7 @@ function SigninScreen(props) {
                     </h4>
                     </li>
                 <li>
-                    <button component={Link} to={redirect ===  "/" ? "register" : "register?redirect=" + redirect } className="signUpbutton">Create your Item Shop account here!</button>
+                <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button primary" >Create Account</Link>
                 </li>
             </ul>
         </form>
