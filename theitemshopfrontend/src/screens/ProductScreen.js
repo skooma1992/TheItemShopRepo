@@ -49,10 +49,8 @@ function ProductScreen(props) {
     }
 
     return (
-        <div>
-          <div className="back-to-result">
-            <Link to="/">Back to result</Link>
-          </div>
+        <div className= "main-content">
+          
           {loading ? (
             <div>Loading...</div>
           ) : error ? (

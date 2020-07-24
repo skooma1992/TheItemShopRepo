@@ -4,14 +4,7 @@
   align-items: center;
   flex-direction: column;
 }
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 45px;
-    
-}
+
 .contentDiv {
     display: flex;
     flex-direction: column;
@@ -87,3 +80,7 @@
   left: 5px;
 }
 
+a.newestFilterbutt{
+  color:inherit;
+  list-style-type: none;
+}
