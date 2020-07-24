@@ -98,7 +98,7 @@ a {
   width: 135px;
   flex-wrap: wrap;
   border-radius: 10px;
-  background-color: #fb9c04;;
+  background-color: orange;
   color: rgb(0, 0, 0);
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 18px;
@@ -121,7 +121,7 @@ a {
   height: 55px;
   width: 100px;
   border-radius: 10px;
-  background-color: #fb9c04;
+  background-color:orange;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
   text-decoration: none;
@@ -278,7 +278,7 @@ tbody>tr:nth-child(odd){
   height: 55px;
   width: 130px;
   border-radius: 10px;
-  background-color: #fb9c04;
+  background-color: orange;
   color: black;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
