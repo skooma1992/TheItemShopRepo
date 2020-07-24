@@ -18,34 +18,51 @@ function FishPageData() {
     }
 
     return (
-        <div style={{ marginLeft: "25px", marginRight: "25px" }}>
-            <div className="d-flex flex-row flex-wrap justify-content-between" style={{ marginLeft: "50px", marginRight: "50px" }}>
-                <div className="d-flex flex-column">
-                    <div className="d-flex justify-content-start" style={{ marginBottom: "30px", marginTop: "40px", marginLeft: "28px" }}>
+        <div>
+            <div className="itemHeaderdiv">
+                <header className="itemHeader">
+                    <div className="itemHeader-links">
+                        <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" class="animated jello" alt="carrot icon"></img></Link></button>
+                        <button className="swButt"><Link to="/allitems" className="stButt"><img src="/images/staffIcon.png" alt="carrot icon"></img></Link></button>
+                        <button className="swButt"><Link to="/allitems" className="vButt"><img src="/images/carrotIcon.png" alt="carrot icon"></img></Link></button>
+                        <button className="swButt"><Link to="/fish-guide" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>
+                        <button className="swButt"><Link to="/allitems" className="mButt"><img src="/images/meatIcon.png" alt="meat icon"></img></Link></button>
+                        <button className="swButt"><Link to="/allitems" className="sButt"><img src="/images/stairIcon.png" alt="stair icon"></img></Link></button>
+                        <button className="swButt"><Link to="/allitems" className="bButt"><img src="/images/broomIcon.png" alt="broom icon"></img></Link></button>
+                    </div>
+                </header>
+            </div> 
+
+
+            <div className="d-flex flex-row justify-content-center align-items-center">
+                <div className="d-flex flex-column align-items-center" style={{ marginRight: "10rem" }}>
+                    <div>
+                        {fish.name && <h1>{fish.name["name-USen"].Capitalize()}</h1>}
+                    </div>
+                    <div className="d-flex flex-column">
                         <div>
-                            <img src={fish.icon_uri} />
+                            <div className="d-flex flex-column align-items-center">
+                                <img src={fish.icon_uri} />
+                            </div>
+                        </div>
+                        <div className="d-flex flex-column align-items-center">
+                            <p style={{ fontStyle: "italic", fontSize: "18px"}}>{fish["catch-phrase"]}</p>
+                            <div className="d-flex flex-column align-items-center">
+                                <li style={{fontSize: "20px"}}>
+                                    Average Price: ${fish.price}
+                                </li>
+                                {fish.availability && <li style={{fontSize: "20px"}}>Typically found: {fish.availability.location}</li>}
+                            </div>
                         </div>
                     </div>
-                    <div className="d-flex flex-column" style={{ width: "200px" }}>
-                        <p style={{ fontStyle: "italic" }}>{fish["catch-phrase"]}</p>
-                        <ul>
-                            <li style={{fontSize: "10px"}}>
-                                Average Price: ${fish.price}
-                            </li>
-                            {fish.availability && <li style={{fontSize: "10px"}}>Typically found: {fish.availability.location}</li>}
-                        </ul>
-                    </div>
                 </div>
-                <div className="d-flex justify-content-center" style={{ marginBottom: "20px", marginTop: "50px", marginRight: "550px", marginLeft: "300px" }}>
-                    {fish.name && <h1>{fish.name["name-USen"].Capitalize()}</h1>}
+                <div className="d-flex flex-column align-items-center" style={{ marginLeft: "10rem" }}>
+                    <img src={fish.image_uri} style={{ width: "600px", height: "300px" }} />
+                    <p style={{ fontWeight: "bold", fontSize: "15px", width: "300px" }}>{fish["museum-phrase"]}</p>
                 </div>
-            </div>
-            <div className="d-flex justify-content-center align-items-center flex-column" style={{ marginRight: "50px" }}>
-                <img src={fish.image_uri} style={{ width: "400px", height: "200px" }} />
-                <p style={{ fontWeight: "bold", fontSize: "12px", width: "300px" }}>{fish["museum-phrase"]}</p>
             </div>
         </div>
-    )
+    )   
 }
 
 export default FishPageData;
