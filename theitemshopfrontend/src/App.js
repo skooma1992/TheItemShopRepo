@@ -98,10 +98,10 @@ function App() {
         <div className="footerDiv">
           <footer className="footer">
             <div className="footer-top">
-              <div classname="footer-colone"><h3>Connect with us here!</h3><p>Github links</p></div>
-              <div classname="footer-coltwo"><h3>Help?</h3><p>Getting Started</p></div>
-              <div classname="footer-colthree"><h3>About</h3><p>Data Source</p></div>
-              <div classname="footer-colfour"><h3>Legal</h3><p>Terms of service</p></div>
+              <div className="footer-colone"><h3>Connect with us here!</h3><p>Github Links</p></div>
+              <div className="footer-coltwo"><h3></h3><p>testy2.2</p></div>
+              <div className="footer-colthree"><h3>testy3</h3><p>testy3.2</p></div>
+              <div className="footer-colfour"><h3>testy4</h3><p>testy4.2</p></div>
             </div>
            
           </footer>
