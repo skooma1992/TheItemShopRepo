@@ -37,7 +37,8 @@ function PlaceOrderScreen(props) {
 
   }, [success]);
 
-  return <div className="top-placeholder">
+  return <div className="tip-top">
+  <div className="top-placeholder">
     <CheckoutSteps step1 step2 step3 step4 ></CheckoutSteps>
     <div className="placeorder">
       <div className="placeorder-info">
@@ -45,12 +46,12 @@ function PlaceOrderScreen(props) {
           <h3>
             Shipping
           </h3>
-          <div>
+          <div className="shipping-font">
             {cart.shipping.address}, {cart.shipping.city},
           {cart.shipping.postalCode}, {cart.shipping.country},
           </div>
         </div>
-        <div>
+        <div className="shipping-font">
           <h3>Payment</h3>
           <div>
             Payment Method: {cart.payment.paymentMethod}
@@ -78,17 +79,17 @@ function PlaceOrderScreen(props) {
                       <img src={item.image} alt="product" />
                     </div>
                     <div className="cart-name">
-                      <div>
+                      <div className="shipping-font">
                         <Link to={"/product/" + item.product}>
                           {item.name}
                         </Link>
 
                       </div>
-                      <div>
+                      <div className="shipping-font">
                         Qty: {item.qty}
                       </div>
                     </div>
-                    <div className="cart-price">
+                    <div className="cart-price shipping-font">
                       ${item.price}
                     </div>
                   </li>
@@ -101,27 +102,28 @@ function PlaceOrderScreen(props) {
       </div>
       <div className="placeorder-action">
         <ul>
-          <li>
-            <button className="button primary full-width" onClick={placeOrderHandler} >Place Order</button>
-          </li>
+          
           <li>
             <h3>Order Summary</h3>
           </li>
           <li>
-            <div>Items</div>
-            <div>${itemsPrice}</div>
+            <div className="shipping-font" >Items</div>
+            <div className="shipping-font">${itemsPrice}</div>
           </li>
           <li>
-            <div>Shipping</div>
-            <div>${shippingPrice}</div>
+            <div className="shipping-font">Shipping</div>
+            <div className="shipping-font">${shippingPrice}</div>
           </li>
           <li>
-            <div>Tax</div>
-            <div>${taxPrice}</div>
+            <div className="shipping-font">Tax</div>
+            <div className="shipping-font">${taxPrice}</div>
           </li>
           <li>
-            <div>Order Total</div>
-            <div>${totalPrice}</div>
+            <div className="shipping-font">Order Total</div>
+            <div className="shipping-font">${totalPrice}</div>
+          </li>
+          <li>
+            <button className="button primary full-width" onClick={placeOrderHandler} >Place Order</button>
           </li>
         </ul>
 
@@ -130,6 +132,7 @@ function PlaceOrderScreen(props) {
       </div>
 
     </div>
+  </div>
   </div>
 
 }

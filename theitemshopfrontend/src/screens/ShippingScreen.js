@@ -64,7 +64,7 @@ function ShippingScreen(props) {
                     </li>
 
                     <li>
-                        <button type="submit" className="button primary">Continue</button>
+                        <button type="submit" className="signInbutt">Continue</button>
                     </li>
 
 

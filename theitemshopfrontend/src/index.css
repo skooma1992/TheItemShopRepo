@@ -1,13 +1,13 @@
 html{
   font-size: 62.5%;
   box-sizing: border-box;
-  background-color: rgba(203, 235, 173, 0.274);
+  ;
 }
 body{
   font: 1.6rem Helvetica;
   height: 100vh;
   margin: 0;
-  background-color: rgba(203, 235, 173, 0.274);
+ ;
 }
 button{
   font-size: 1.6rem;
@@ -32,7 +32,7 @@ a {
   height: 100%;
   width: 100%;
   justify-items: center;
-  background-color: rgba(203, 235, 173, 0.233);
+  background-color: white;
 }
 .main {
   width: 100%;
@@ -154,7 +154,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 161%;
+  width: 100%;
   margin-bottom: 0px;
 }
 .footer-top {
@@ -177,10 +177,12 @@ a {
   color: #c0c0c0;
   flex: 1 1;
   padding-top: 1rem;
+  font-size: 15px;
 }
 .checkout-steps > div.active{
   border-top: .3rem #f08000 solid;
   color: #f08000;
+  font-size: 15px;
 }
 
 .dropdown{
@@ -207,15 +209,14 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-top: 60px;
 
 }
 
-.content-margined{
-  margin: 1rem;
-}
 
 .table{
   width: 100%;
+  font-size: 20px;
 }
 th{
   text-align: left;
@@ -257,7 +258,7 @@ tbody>tr:nth-child(odd){
 .details-action {
   border: .1rem #808080 solid;
   border-radius: .5rem;
-  background-color: #f8f8f8f8;
+  background-color: honeydew;
   padding: 1rem;
 }
 .details-action ul li:last-child{
@@ -276,7 +277,7 @@ tbody>tr:nth-child(odd){
   height: 55px;
   width: 130px;
   border-radius: 10px;
-  background-color: #f8a826;
+  background-color: #fb9c04;
   color: black;
   font-family: Helvetica, Arial, Sans-Serif;
   font-size: 20px;
@@ -394,6 +395,7 @@ ul.review {
 .review li {
   margin: 1rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .review li > div {
   margin: 0.5rem;
@@ -429,4 +431,32 @@ a > .rating > span:last-child {
 }
 .proOrders {
   margin-top: 65px;
+  display: flex;
+  justify-content: center;
+}
+.review-form-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border: .1rem #c0c0c0c0 solid;
+  border-radius: .5rem;
+  list-style-type: none;
+  background-color: honeydew;
+  border-radius: 15px;
+  margin: auto;
+}
+.topOrder{
+  display: flex;
+  justify-content: center;
+}
+label {
+  display: inline-block;
+  margin-bottom: .5rem;
+  font-size: 20px;
+}
+input{
+  font-size: 20px;
+}
+.shipping-font{
+  font-size: 20px;
 }

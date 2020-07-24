@@ -53,7 +53,7 @@ function App() {
               {/* IF THE USER IS SIGNED IN SHOW PROFILE PAGE IF NOT SHOW SIGN IN SCREEN */}
               {
                 userInfo ? <Link to="/profile" className="userButt">{userInfo.name}</Link> :
-                  <Link to="/signin" className="signButt" >Sign In</Link>
+                  <Link to="/signin" className="signButt">Sign In</Link>
               }
 
             </button>

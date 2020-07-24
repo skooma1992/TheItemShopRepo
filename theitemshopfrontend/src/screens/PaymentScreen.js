@@ -17,7 +17,8 @@ function PaymentScreen(props) {
         props.history.push('placeorder')
 
     }
-    return <div className="payDiv">
+    return <div className = "topPay">
+    <div className="payDiv">
         <CheckoutSteps step1 step2 step3></CheckoutSteps>
         <div className="form">
             <form onSubmit={submitHandler}>
@@ -45,7 +46,7 @@ function PaymentScreen(props) {
             </form>
         </div>
     </div>
-
+    </div>
 
 }
 

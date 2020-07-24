@@ -3,7 +3,8 @@
 .profileDiv,.profile{
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 5%;
+  margin-top: 50px;
+  justify-content: center;
 }
 
 .profile-info{

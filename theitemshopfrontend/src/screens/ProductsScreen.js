@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import "./products.css"
 import { useSelector, useDispatch } from 'react-redux';
 
 import { saveProduct, listProducts, deleteProdcut } from '../actions/productActions';
@@ -61,7 +61,7 @@ function ProductsScreen(props) {
     const bodyFormData = new FormData();
     bodyFormData.append('image', file);
     setUploading(true)
-    axios.post("api/uploads", bodyFormData,{
+    axios.post("/api/uploads", bodyFormData,{
       headers:{
         'Content-Type': 'multipart/form-data'
       }
@@ -76,11 +76,12 @@ function ProductsScreen(props) {
   const deleteHandler = (product) => {
     dispatch(deleteProdcut(product._id));
   }
-  return <div className="content content-margined">
+  return <div className="topProducts">
+   <div className="content content-margined">
 
     <div className="product-header">
-      <h3>Products</h3>
-      <button className="button primary" onClick={() => openModal({})}>Create Product</button>
+      
+      <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
       <div className="form">
@@ -109,14 +110,17 @@ function ProductsScreen(props) {
               </input>
             </li>
             <li>
-              <label htmlFor="image">
-                Image
-          </label>
-              <input type="text" name="image" value={image} id="image" onChange={(e) => setImage(e.target.value)}>
-              </input>
-              <input type ="file" onChange ={uploadFileHandler}></input>
-              {uploading && <div>Uploading...</div>}
-            </li>
+                <label htmlFor="image">Image</label>
+                <input
+                  type="text"
+                  name="image"
+                  value={image}
+                  id="image"
+                  onChange={(e) => setImage(e.target.value)}
+                ></input>
+                <input type="file" onChange={uploadFileHandler}></input>
+                {uploading && <div>Uploading...</div>}
+              </li>
             <li>
               <label htmlFor="brand">
                 Brand
@@ -148,7 +152,7 @@ function ProductsScreen(props) {
               <button type="submit" className="button primary">{id ? "Update" : "Create"}</button>
             </li>
             <li>
-              <button type="button" onClick={() => setModalVisible(false)} className="button secondary">Back</button>
+              <button type="button" onClick={() => setModalVisible(false)} className="button primary">Back</button>
             </li>
           </ul>
         </form>
@@ -186,6 +190,7 @@ function ProductsScreen(props) {
       </table>
 
     </div>
+  </div>
   </div>
 }
 export default ProductsScreen; 

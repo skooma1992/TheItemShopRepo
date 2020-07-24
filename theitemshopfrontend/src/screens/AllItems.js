@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import './allitems.css'
 import Rating from '../components/Rating';
+import { MDBContainer } from 'mdbreact';
 
 
 
@@ -12,6 +13,7 @@ function AllItems(props) {
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
+  const scrollContainerStyle = { width: "82%", maxHeight: "600px", };
 
 
   useEffect(() => {
@@ -25,7 +27,7 @@ function AllItems(props) {
   return loading ? <div> Loading...</div> :
     error ? <div>{error}</div> :
       // IF NOT DISPLAY PRODUCT LIST 
-      
+      <div className="itemsTop">
       <div className="itemsDiv">
 
           <div className="itemHeaderdiv">
@@ -41,7 +43,9 @@ function AllItems(props) {
               </div>
             </header>
           </div>
-
+          <div className="mdb-container">
+          
+          <div className="scrollbar scrollbar-near-moon mdb-cont" style={scrollContainerStyle}>
           <div className="products">
             {
               products.map(product =>
@@ -63,6 +67,10 @@ function AllItems(props) {
               )
             }
           </div>
+         </div>
+         
+        </div>
+        </div>
         </div>
         
         
