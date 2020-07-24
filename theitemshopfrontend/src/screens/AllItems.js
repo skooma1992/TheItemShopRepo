@@ -13,7 +13,7 @@ function AllItems(props) {
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
-  const scrollContainerStyle = { width: "100%", maxHeight: "600px" };
+  const scrollContainerStyle = { width: "82%", maxHeight: "600px", };
 
 
   useEffect(() => {
@@ -44,8 +44,8 @@ function AllItems(props) {
             </header>
           </div>
           <div className="mdb-container">
-          <MDBContainer>
-          <div className="scrollbar scrollbar-near-moon" style={scrollContainerStyle}>
+          
+          <div className="scrollbar scrollbar-near-moon mdb-cont" style={scrollContainerStyle}>
           <div className="products">
             {
               products.map(product =>
@@ -68,7 +68,7 @@ function AllItems(props) {
             }
           </div>
          </div>
-         </MDBContainer>
+         
         </div>
         </div>
         </div>

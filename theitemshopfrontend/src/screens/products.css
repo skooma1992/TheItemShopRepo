@@ -22,3 +22,11 @@
     align-items: center;
     margin-bottom: 20px;
 }
+
+.form-products{
+  display:flex;
+  justify-content: center;
+}
+.product-list{
+  display:flex;
+}

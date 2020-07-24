@@ -28,7 +28,7 @@ function OrdersScreen(props) {
       <div className="content content-margined">
 
         <div className="order-header">
-          <h3><Link to ="/products">ADD A PRODUCT</Link></h3>
+          <h3><Link to ="/products"><h2 className="add-product">ADD A PRODUCT</h2></Link></h3>
           <h3>Orders</h3>
         </div>
         <div className="order-list">

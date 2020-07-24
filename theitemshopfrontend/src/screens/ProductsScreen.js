@@ -84,7 +84,7 @@ function ProductsScreen(props) {
       <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
-      <div className="form">
+      <div className="form-products">
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>
@@ -149,7 +149,7 @@ function ProductsScreen(props) {
               <button type="submit" className="button primary">{id ? "Update" : "Create"}</button>
             </li>
             <li>
-              <button type="button" onClick={() => setModalVisible(false)} className="button secondary">Back</button>
+              <button type="button" onClick={() => setModalVisible(false)} className="button primary">Back</button>
             </li>
           </ul>
         </form>

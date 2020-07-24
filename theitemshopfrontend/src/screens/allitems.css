@@ -89,3 +89,6 @@ a > .rating > span:last-child {
   justify-content: center;
   position: relative;
 }
+.mdb-cont{
+  margin-top: 45px;
+}
