@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listProducts } from '../actions/productActions';
 import './allitems.css'
 import Rating from '../components/Rating';
+import { MDBContainer } from 'mdbreact';
 
 
 
@@ -12,6 +13,7 @@ function AllItems(props) {
   const productList = useSelector(state => state.productList);
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
+  const scrollContainerStyle = { width: "100%", maxHeight: "600px" };
 
 
   useEffect(() => {
@@ -41,7 +43,9 @@ function AllItems(props) {
               </div>
             </header>
           </div>
-
+          <div className="mdb-container">
+          <MDBContainer>
+          <div className="scrollbar scrollbar-near-moon" style={scrollContainerStyle}>
           <div className="products">
             {
               products.map(product =>
@@ -51,7 +55,7 @@ function AllItems(props) {
                     <div className="productInfo">
                       <div className="product-name">
                         <Link to={'/product/' + product._id}>{product.name}</Link></div>
-                      <div className="product-brand"><h3>Description</h3>{product.brand}</div>
+                      <div className="product-brand">{product.brand}</div>
                       <div className="product-price">${product.price}</div>
                       <div className="product-rating">
                       <Rating value = {product.rating} text={product.numReviews + ' reviews'}
@@ -63,6 +67,9 @@ function AllItems(props) {
               )
             }
           </div>
+         </div>
+         </MDBContainer>
+        </div>
         </div>
         </div>
         

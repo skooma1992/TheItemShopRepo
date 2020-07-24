@@ -2,8 +2,7 @@ import './homescreen.css'
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { listProducts } from '../actions/productActions';
-
+import { listProducts } from '../actions/productActions'; 
 
 function HomeScreen(props) {
 
@@ -27,7 +26,7 @@ function HomeScreen(props) {
       <div className="itemHeaderdiv">
         <header className="itemHeader">
           <div className="itemHeader-links">
-            <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" alt="carrot icon"></img></Link></button>
+            <button className="swButt"><Link to="/allitems" className="swButt"><img src="/images/swordIcon.png" class="animated jello" alt="carrot icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="stButt"><img src="/images/staffIcon.png" alt="carrot icon"></img></Link></button>
             <button className="swButt"><Link to="/allitems" className="vButt"><img src="/images/carrotIcon.png" alt="carrot icon"></img></Link></button>
             <button className="swButt"><Link to="/fish-guide" className="fButt"><img src="/images/4.png" alt="fish icon"></img></Link></button>

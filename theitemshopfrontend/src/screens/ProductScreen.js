@@ -126,7 +126,7 @@ function ProductScreen(props) {
 
               <div className="content-margined">
                   <h2>Reviews</h2>
-                  {!product.reviews.length && <div>There is no review</div>}
+                  {!product.reviews.length && <div className= "shippingFont">There are no reviews</div>}
                   <ul className="review" id="reviews">
                     {product.reviews.map((review) => (
                       <li key={review._id}>
@@ -142,10 +142,10 @@ function ProductScreen(props) {
                       <h3>Write a customer review</h3>
                       {userInfo ? (
                         <form onSubmit={submitHandler}>
-                          <ul className="form-container">
+                          <ul className="review-form-container form-container">
                             <li>
                               <label htmlFor="rating">Rating</label>
-                              <select
+                              <select className ="review-select"
                                 name="rating"
                                 id="rating"
                                 value={rating}

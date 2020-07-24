@@ -84,3 +84,8 @@ a > .rating > span:last-child {
   display: flex;
   justify-content: center;
 }
+.mdb-container{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}

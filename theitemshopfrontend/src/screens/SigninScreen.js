@@ -10,11 +10,8 @@ function SigninScreen(props) {
     const [password, setPassword] = useState('');
     const userSignin = useSelector(state => state.userSignin);
     const {loading, userInfo, error } = userSignin;
-
-
     const dispatch = useDispatch();
     const redirect = props.location.search?props.location.search.split("=")[1]:'/';
-
 
     useEffect(() => {
         if (userInfo){
@@ -24,7 +21,6 @@ function SigninScreen(props) {
 
         }
     }, [userInfo]);
-
 
     const submitHandler = (e) => {
         e.preventDefault();
@@ -47,15 +43,13 @@ function SigninScreen(props) {
                         Email
                     </label>
                     <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)}>
-
                     </input>
                 </li>
                 <li>
                     <label htmlFor="password">
                         Password
-                        </label>
+                    </label>
                     <input type="password" id="password" name="password" onChange={(e) => setPassword(e.target.value)}>
-
                     </input>
                 </li>
                 <li>
