@@ -21,7 +21,7 @@ function ShippingScreen(props) {
         props.history.push('payment')
 
     }
-    return <div>
+    return <div className="shipDiv">
         <CheckoutSteps step1 step2></CheckoutSteps>
         <div className="form">
             <form onSubmit={submitHandler}>

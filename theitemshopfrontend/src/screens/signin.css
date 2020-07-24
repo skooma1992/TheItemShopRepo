@@ -31,3 +31,20 @@
 .dropdown:hover .dropdown-content{
   display: block;
 } 
+.signUpbutton {
+  height: 60px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fb9c04;;
+  color: rgb(0, 0, 0);
+  font-family: Helvetica, Arial, Sans-Serif;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none !important;
+  text-shadow: -1px -1px 1px #0742ca;
+  position: relative;
+  padding: 5px;
+  box-shadow: 5px 5px 0 rgba(73, 73, 73, 0.794);
+  transition: all 0.3s ease;
+  margin: 0 10px 0 0;
+}

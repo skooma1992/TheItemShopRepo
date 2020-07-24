@@ -6,7 +6,7 @@ import "../component_css/scrollbar.css";
 function guideFishList() {
     const scrollContainerStyle = { width: "95%", maxHeight: "600px" };
     return (
-        <MDBContainer>
+        <MDBContainer style={{marginTop: "50px"}}>
             <div className="scrollbar scrollbar-near-moon mt-5 mx-auto" style={scrollContainerStyle}>
                 <div style={{ display: "flex", flexWrap: "wrap", flexDirection: "row" }}>
                     <FishData />            
