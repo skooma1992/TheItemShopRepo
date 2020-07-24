@@ -9,7 +9,7 @@
 ![Forks](https://img.shields.io/github/forks/skooma1992/TheItemShop)
 ![Contributors](https://img.shields.io/badge/Contributors-4-orange)
 ![Pull Requests](https://img.shields.io/badge/Pull%20Requests-0-green)
-![License](https://img.shields.io/github/license/skooma1992/TheItemShop)
+<!-- ![License](https://img.shields.io/github/license/skooma1992/TheItemShop) -->
 
 ## Setup
 >Run NPM Install to install all necessary dependencies
