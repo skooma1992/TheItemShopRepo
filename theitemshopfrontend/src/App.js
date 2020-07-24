@@ -99,9 +99,9 @@ function App() {
           <footer className="footer">
             <div className="footer-top">
               <div className="footer-colone"><h3>Connect with us here!</h3><p>Github Links</p></div>
-              <div className="footer-coltwo"><h3></h3><p>testy2.2</p></div>
-              <div className="footer-colthree"><h3>testy3</h3><p>testy3.2</p></div>
-              <div className="footer-colfour"><h3>testy4</h3><p>testy4.2</p></div>
+              <div className="footer-coltwo"><h3>About</h3><p>Need Help?</p></div>
+              <div className="footer-colthree"><h3>Data</h3><p>Data source</p><p>Logo</p></div>
+              <div className="footer-colfour"><h3>Legal</h3><p>Terms of service</p><p>Privacy Policy</p></div>
             </div>
            
           </footer>

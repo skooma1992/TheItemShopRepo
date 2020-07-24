@@ -56,23 +56,25 @@ function ProductsScreen(props) {
     }));
   }
 
-  const uploadFileHandler = (e) =>{
+  const uploadFileHandler = (e) => {
     const file = e.target.files[0];
     const bodyFormData = new FormData();
     bodyFormData.append('image', file);
-    setUploading(true)
-    axios.post("/api/uploads", bodyFormData,{
-      headers:{
-        'Content-Type': 'multipart/form-data'
-      }
-    }).then(response =>{
-      setImage(response.data);
-      setUploading(false)
-    }).catch(err=>{
-      console.log(err);
-      setUploading(false)
-    })
-  }
+    setUploading(true);
+    axios
+      .post('/api/uploads/', bodyFormData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      })
+      .then((response) => {
+        setImage(response.data);
+        setUploading(false);
+      })
+      .catch((err) => {
+        setUploading(false);
+      });
+  };
   const deleteHandler = (product) => {
     dispatch(deleteProdcut(product._id));
   }
@@ -84,7 +86,7 @@ function ProductsScreen(props) {
       <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
-      <div className="form">
+      <div className="form-products">
         <form onSubmit={submitHandler} >
           <ul className="form-container">
             <li>

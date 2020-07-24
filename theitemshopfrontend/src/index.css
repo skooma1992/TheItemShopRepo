@@ -110,6 +110,7 @@ a {
   box-shadow: 5px 5px 0 rgba(73, 73, 73, 0.794);
   transition: all 0.3s ease;
   margin: 0 10px 0 0;
+  align-self: center;
 }
 .signInbutt:hover, .cartButt:hover, .adminButt:hover, .button.primary:hover, .button:hover, .signUpbutton:hover {
   box-shadow: 0px 0px 0 #666;
@@ -144,7 +145,7 @@ a {
   text-align: center;
   padding: 20px;
   position: absolute;
-  height: 70px;
+  height: 100px;
   width: 140rem;
   border-radius: 15px;
   margin-top: 15px;

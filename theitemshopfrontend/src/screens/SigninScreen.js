@@ -53,7 +53,7 @@ function SigninScreen(props) {
                     </input>
                 </li>
                 <li>
-                    <button type="submit" className="button primary">Sign In</button>
+                    <button type="submit" className="button primarys">Sign In</button>
                 </li>
                 <li>
                     <h4>
@@ -61,7 +61,7 @@ function SigninScreen(props) {
                     </h4>
                     </li>
                 <li>
-                <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button primary" >Create Account</Link>
+                <Link to={redirect === "/" ? "register" : "register?redirect=" + redirect} className="button primarys" >Create Account</Link>
                 </li>
             </ul>
         </form>
