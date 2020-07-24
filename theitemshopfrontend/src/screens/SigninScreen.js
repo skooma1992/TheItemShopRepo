@@ -31,7 +31,8 @@ function SigninScreen(props) {
         dispatch(signin(email, password))
 
     }
-    return <div className="signInform">
+    return <div className="signInTop">
+    <div className="signInform">
         <form onSubmit={submitHandler}>
             <ul className="form-container">
                 <li>
@@ -66,10 +67,11 @@ function SigninScreen(props) {
                     </h4>
                     </li>
                 <li>
-                    <Link to={redirect ===  "/" ? "register" : "register?redirect=" + redirect } className="button text-center secondary">Create your Item Shop account here!</Link>
+                    <button component={Link} to={redirect ===  "/" ? "register" : "register?redirect=" + redirect } className="signUpbutton">Create your Item Shop account here!</button>
                 </li>
             </ul>
         </form>
+    </div>
     </div>
 
 }

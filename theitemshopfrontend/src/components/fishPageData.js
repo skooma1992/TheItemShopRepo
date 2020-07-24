@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import API from './API';
-import { propTypes } from "react-bootstrap/esm/Image";
 
 function FishPageData() {
 
@@ -15,10 +14,18 @@ function FishPageData() {
     }, [])
 
     return (
-        <div>
-            <img src={fish.image_uri} />
-            {fish.name && <div>{fish.name["name-USen"]}</div>}
-            <p>{fish["museum-phrase"]}</p>
+        <div style={{ marginLeft: "25px", marginRight: "25px" }}>
+            <div style={{ marginLeft: "50px", marginRight: "50px" }}>
+                <div className="d-flex justify-content-center" style={{ marginBottom: "254px" }}>
+                    {fish.name && <h1>{fish.name["name-USen"]}</h1>}
+                </div>
+                <div className="d-flex justify-content-start" style={{}}>
+                    <div>
+                        <img src={fish.icon_uri} />
+                    </div>
+                </div>
+                <p>{fish["museum-phrase"]}</p>
+            </div>
         </div>
     )
 }

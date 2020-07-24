@@ -1,25 +1,53 @@
-/* Product Details */
+/* PRODUCT DETAILS */
+.megaPdiv {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 90%;
+}
+.ulCenter {
+  text-align: center;
+}
+li {
+  font-size: 15px;
+}
+.productDiv {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  flex-direction: row;
+  margin-top: 4%;
+  /* margin-left: 30%; */
+  /* width: 90%; */
+  margin-left: 250px;
+}
+.productInfoDiv {
+  display: flex;
+  flex-direction: row;
+}
+.content-margined h2{
+  text-align: center;
+}
 .details {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: nowrap;
   padding: 1rem;
 }
 .details-image {
   flex: 2 1 60rem;
 }
 .details-image img {
-  max-width: 60rem;
-  width: 100%;
+  width: 396.86px;
+  height: 396.86px;
+  margin-bottom: 15px;
 }
 .details-info {
-  flex: 1 1 30rem;
+  /* flex: 1 1 30rem; */
+  margin-left: 200px;
 }
-.details-action {
-  flex: 1 1 30rem;
-}
-
 .details-info ul,
 .details-action ul {
   list-style-type: none;
@@ -37,6 +65,10 @@
   border-radius: 0.5rem;
   background-color: #f8f8f8;
   padding: 1rem;
+  width: 65px;
+  max-width: 300px;
+  max-height: 180px;
+  margin-left: 300px;
 }
 .details-action ul li:last-child {
   display: flex;
@@ -47,13 +79,13 @@
   border: 0.1rem #808080 solid;
   border-radius: 0.5rem;
   cursor: pointer;
+  border-radius: .5rem;
+  color: black;
 }
 .button:hover {
   border: 0.1rem #404040 solid;
 }
-.button.primary {
-  background-color: #f0c040;
-}
+
 .button.secondary {
   background-color: #f0f0f0;
 }

@@ -25,7 +25,7 @@ function AllItems(props) {
   return loading ? <div> Loading...</div> :
     error ? <div>{error}</div> :
       // IF NOT DISPLAY PRODUCT LIST 
-      
+      <div className="itemsTop">
       <div className="itemsDiv">
 
           <div className="itemHeaderdiv">
@@ -51,7 +51,7 @@ function AllItems(props) {
                     <div className="productInfo">
                       <div className="product-name">
                         <Link to={'/product/' + product._id}>{product.name}</Link></div>
-                      <div className="product-brand"><h3>Brand</h3>{product.brand}</div>
+                      <div className="product-brand"><h3>Description</h3>{product.brand}</div>
                       <div className="product-price">${product.price}</div>
                       <div className="product-rating">
                       <Rating value = {product.rating} text={product.numReviews + ' reviews'}
@@ -63,6 +63,7 @@ function AllItems(props) {
               )
             }
           </div>
+        </div>
         </div>
         
         

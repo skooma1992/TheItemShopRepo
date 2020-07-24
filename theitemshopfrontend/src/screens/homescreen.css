@@ -27,6 +27,9 @@
   margin-top: 10px;
   border-radius: 15px;
 }
+a.signButt {
+  color: black;
+}
 .itemHeader-links {
   display: flex;
   flex-direction: row;
@@ -53,17 +56,20 @@
     justify-content: center;
     align-items: center;
     margin: 65px 0px 45px 0px;
+    color: black;
 }
+
 .priceFilterbutt,.ratingFilterbutt,.allItemsbutt,.newestFilterbutt{
   height: 100px;
   width: 120px;
+  flex-wrap: wrap;
   border-radius: 10%;
-  color: rgb(0, 3, 3);
+  color: rgb(7, 7, 7);
   background-color: #fb9c04;
-  font-family: Helvetica, Arial, Sans-Serif;
   font-size: 24px;
+  font-weight: bold;
+  text-shadow: black;
   text-decoration: none;
-  text-shadow: -1px -1px 1px #470505;
   position: relative;
   padding: 4px;
   box-shadow: 5px 5px 0 rgba(15, 14, 14, 0.534);
@@ -71,7 +77,10 @@
   margin: 0 45px 0 5px;
   cursor: pointer;
 }
-
+a{
+  color: black!important;
+  
+}
 .priceFilterbutt:hover, .ratingFilterbutt:hover, .allItemsbutt:hover, .newestFilterbutt:hover {
   color: rgb(189, 187, 187);
   text-shadow: rgb(70, 68, 68);

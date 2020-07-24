@@ -76,11 +76,12 @@ function ProductsScreen(props) {
   const deleteHandler = (product) => {
     dispatch(deleteProdcut(product._id));
   }
-  return <div className="content content-margined">
+  return <div className="topProducts">
+   <div className="content content-margined">
 
     <div className="product-header">
       <h3>Products</h3>
-      <button className="button primary" onClick={() => openModal({})}>Create Product</button>
+      <button className="buttontest" onClick={() => openModal({})}>Create Product</button>
     </div>
     {modalVisible &&
       <div className="form">
@@ -186,6 +187,7 @@ function ProductsScreen(props) {
       </table>
 
     </div>
+  </div>
   </div>
 }
 export default ProductsScreen; 

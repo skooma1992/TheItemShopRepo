@@ -43,7 +43,7 @@ function ProfileScreen(props) {
       <div className="profile-info">
         <div className="form">
           <form onSubmit={submitHandler} >
-            <ul className="form-container">
+            <ul className="form-container shipping-font">
               <li>
                 <h2>Edit User Profile</h2>
               </li>
@@ -77,7 +77,7 @@ function ProfileScreen(props) {
               </li>
               <li>
 
-                <button type="button" onClick={handleLogout} className="button secondary full-width">Logout</button>
+                <button type="button" onClick={handleLogout} className="button primary full-width">Logout</button>
               </li>
 
             </ul>
